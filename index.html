@@ -45,7 +45,7 @@ h1 .it{font-style:italic;font-weight:400;color:var(--red)}
 
 /* layout */
 .main{display:grid;grid-template-columns:300px 1fr;gap:34px;padding:34px 0 80px}
-@media(max-width:880px){.main{grid-template-columns:1fr}}
+@media(max-width:880px){.main{grid-template-columns:1fr;padding-top:22px}.index{display:none}}
 
 /* index */
 .index{position:sticky;top:14px;align-self:start;max-height:calc(100vh - 28px);overflow:auto;
@@ -100,6 +100,15 @@ li{margin:4px 0;font-size:.92rem}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:.78rem;background:var(--panel2);border:1px solid var(--line);border-radius:999px;
   padding:4px 11px;color:var(--ink)}
+.chip-link{text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.chip-link:hover{border-color:var(--red);color:var(--red)}
+.chip-cam{font-size:.72em;color:var(--brass)}
+.imgcard.plan .imgcard-ico{color:#7FB3C9}
+.scene.preset{border-color:#4a3f2e;background:#1d1812}
+.scene.preset .scene-no{color:var(--brass);font-size:1.15rem}
+.scene.preset .scene-act{color:var(--brass)}
+.idx-preset .idx-no{color:var(--brass)}
+.idx-preset .idx-title{color:var(--brass)}
 
 .stage{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;margin-top:6px}
 @media(max-width:720px){.stage{grid-template-columns:1fr}}
@@ -175,223 +184,244 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       <h3>Índice de escenas</h3>
       <input class="search" id="search" type="search" placeholder="Buscar escena o personaje…" autocomplete="off">
       <div class="idx-group-title">Acto 1</div>
-      <ul class="idx"><li class="idx-item">
+      <ul class="idx"><li class="idx-item idx-preset">
+      <button class="idx-head" data-target="preset-act1"><span class="idx-no">SET</span><span class="idx-title">Preset de primer acto</span><span class="idx-exp">▸</span></button>
+    </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-1">
         <span class="idx-no">A1·01</span>
         <span class="idx-title">Prologue</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice (1 + 2)</span><span class="chip">Carroll / White Rabbit (como Carroll)</span><span class="chip">Jack (como Jack)</span><span class="chip">Mother</span><span class="chip">Father</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Edita</span><span class="chip">Lorina</span><span class="chip">Magician</span><span class="chip">Vicar</span><span class="chip">Verger</span><span class="chip">Raj</span><span class="chip">Butler</span><span class="chip">Indian Servant</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Maids (3)</span><span class="chip">Raj Wives (2)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (1 + 2)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">Carroll / White Rabbit (como Carroll)<span class="chip-cam">↗</span></a><span class="chip">Jack (como Jack)</span><a class="chip chip-link" href="https://drive.google.com/file/d/1DB9nmxX1TnWpT2qIqvgL_50DparqY7u2/view" target="_blank" rel="noopener">Mother<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">Father<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1OcWCdRAF49c5ATXhta_o393RWHaTIeRe/view" target="_blank" rel="noopener">Edita<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1Q5Ei4t5vfZKmMk0_sYY37S8OI5CftmsU/view" target="_blank" rel="noopener">Lorina<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/16AdOEbr-DrlG2pdGeSMvrjd11D9PuhSU/view" target="_blank" rel="noopener">Magician<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1460GjTiqr8utTPSa4JnO8YV1M6dqD6VG/view" target="_blank" rel="noopener">Vicar<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Verger<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Raj<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Butler<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/17tnhS2kyuz_ChCkQHaUIqfOkjSECr5aT/view" target="_blank" rel="noopener">Indian Servant<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1DNj89mbLwmOEFktZ1efalwQ5JE9AqFLY/view" target="_blank" rel="noopener">Maids (3)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/16FM8JWAmFbAjCPS84xWSxOlqmFJyqCSU/view" target="_blank" rel="noopener">Raj Wives (2)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-2">
         <span class="idx-no">A1·02</span>
         <span class="idx-title">Falling Alice</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-3">
         <span class="idx-no">A1·03</span>
         <span class="idx-title">Hallway Solo</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen (Queen 1)</span><span class="chip">Knave of Hearts</span><span class="chip">Guard (Indian Servant)</span><span class="chip">3 Guards (figuración)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Queen 1)<span class="chip-cam">↗</span></a><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/17tnhS2kyuz_ChCkQHaUIqfOkjSECr5aT/view" target="_blank" rel="noopener">Guard (Indian Servant)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards (figuración)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-4">
         <span class="idx-no">A1·04</span>
         <span class="idx-title">Pool of Tears</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Caucus Animals (8): Turtle, Lory, Eaglet, Hamster, Cat, Mouse, Monkey, Owl, Beagle</span><span class="chip">Edita → Eaglet</span><span class="chip">Lorina → Lory</span><span class="chip">Tear boys (6)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1OcWCdRAF49c5ATXhta_o393RWHaTIeRe/view" target="_blank" rel="noopener">Edita → Eaglet<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1Q5Ei4t5vfZKmMk0_sYY37S8OI5CftmsU/view" target="_blank" rel="noopener">Lorina → Lory<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1q2F8v-aiodBaMPT_-GDykSxTTnghSNz9/view" target="_blank" rel="noopener">Tear boys (6)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-5">
         <span class="idx-no">A1·05</span>
         <span class="idx-title">Alice Solo</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice (3)</span><span class="chip">(según versión: Caucus Animals / Rooster — confirmar con dirección)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (3)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1g3AYd8Mx3OJ9h6v3QtWvlHqiHIje_83_/view" target="_blank" rel="noopener">(según versión: Caucus Animals / Rooster — confirmar con dirección)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-6">
         <span class="idx-no">A1·06</span>
         <span class="idx-title">Paper Boat</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-7">
         <span class="idx-no">A1·07</span>
         <span class="idx-title">Fish and Frog</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Cook</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-8">
         <span class="idx-no">A1·08</span>
         <span class="idx-title">Pig and Pepper</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Cook</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Queen 1 (al cierre, &#x27;The Knave&#x27;)</span><span class="chip">King of Hearts</span><span class="chip">Executioner</span><span class="chip">Guard</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen 1 (al cierre, &#x27;The Knave&#x27;)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guard<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-9">
         <span class="idx-no">A1·09</span>
         <span class="idx-title">Cheshire Cat</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (cabeza)</span><span class="chip">Cheshire Cat (7 piezas)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (cabeza)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (7 piezas)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-10">
         <span class="idx-no">A1·10</span>
         <span class="idx-title">White Rabbit and Alice (Tik Tok)</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-11">
         <span class="idx-no">A1·11</span>
         <span class="idx-title">Tea Party</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Mad Hatter (Magician)</span><span class="chip">March Hare (Vicar)</span><span class="chip">Dormouse (Verger)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter (Magician)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare (Vicar)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse (Verger)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-12">
         <span class="idx-no">A1·12</span>
         <span class="idx-title">2nd Cheshire Cat</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (4 piezas)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (4 piezas)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-13">
         <span class="idx-no">A1·13</span>
         <span class="idx-title">Caterpillar</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Raj → Caterpillar</span><span class="chip">Caterpillar Women (4)</span><span class="chip">Caterpillar Tail (8)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Raj → Caterpillar<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18cxTQ-gOsJQs65106iHWSRzHHUmQC-R_/view" target="_blank" rel="noopener">Caterpillar Women (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18cxTQ-gOsJQs65106iHWSRzHHUmQC-R_/view" target="_blank" rel="noopener">Caterpillar Tail (8)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-14">
         <span class="idx-no">A1·14</span>
         <span class="idx-title">Alice — back in the Hallway</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-15">
         <span class="idx-no">A1·15</span>
         <span class="idx-title">Flowers</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Flower Soloist Women (4)</span><span class="chip">Flower Women (6)</span><span class="chip">Flower Soloist Men (4)</span><span class="chip">Flower Man (6)</span><span class="chip">Knave of Hearts</span><span class="chip">Guards (2)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1SNph4xWGF99a6rgeWyl5n571BpyKt5Ek" target="_blank" rel="noopener">Flower Soloist Women (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1SNph4xWGF99a6rgeWyl5n571BpyKt5Ek" target="_blank" rel="noopener">Flower Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1d5UDmOHY-HrWim26m1yL6B4hkYORRBIv/view" target="_blank" rel="noopener">Flower Soloist Men (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1d5UDmOHY-HrWim26m1yL6B4hkYORRBIv/view" target="_blank" rel="noopener">Flower Man (6)<span class="chip-cam">↗</span></a><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guards (2)<span class="chip-cam">↗</span></a></div>
     </li></ul>
       <div class="idx-group-title">Acto 2</div>
-      <ul class="idx"><li class="idx-item">
+      <ul class="idx"><li class="idx-item idx-preset">
+      <button class="idx-head" data-target="preset-interval"><span class="idx-no">SET</span><span class="idx-title">Preset de intervalo</span><span class="idx-exp">▸</span></button>
+    </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-1">
         <span class="idx-no">A2·01</span>
         <span class="idx-title">Gardeners</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><span class="chip">Hedgehogs (4, niños)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">3 Guards</span></div>
+      <div class="idx-chars"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs (4, niños)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-2">
         <span class="idx-no">A2·02</span>
         <span class="idx-title">Queen&#x27;s Entrance</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">King of Hearts</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><span class="chip">Alice</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Big Box)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-3">
         <span class="idx-no">A2·03</span>
         <span class="idx-title">Tart Adagio</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Tart Suitors (4)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1rl2lwQeR68qMerdxofghmgZTdTCYnPQK" target="_blank" rel="noopener">Tart Suitors (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-4">
         <span class="idx-no">A2·04</span>
         <span class="idx-title">Croquet Match</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">White Rabbit</span><span class="chip">Flamingo (5)</span><span class="chip">Alice</span><span class="chip">Hedges (6)</span><span class="chip">Hedgehogs</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Big Box)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1BFg8GYvJjcT1Y3_8kBs2F3V_NaVKccnn/view" target="_blank" rel="noopener">Flamingo (5)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Hedges (6)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-5">
         <span class="idx-no">A2·05</span>
         <span class="idx-title">Jack is Arrested</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Knave of Hearts</span><span class="chip">Guards</span><span class="chip">Executioner</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="idx-chars"><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guards<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-6">
         <span class="idx-no">A2·06</span>
         <span class="idx-title">Cards</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">PT Card Women (6)</span><span class="chip">PT Card Men (6)</span><span class="chip">Card Women 7+8</span><span class="chip">Card Men 7+8</span><span class="chip">Alice</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">PT Card Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1RoF8-0YLdebHBiuKBxB6tOw6VBaFdni6" target="_blank" rel="noopener">PT Card Men (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Card Women 7+8<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1RoF8-0YLdebHBiuKBxB6tOw6VBaFdni6" target="_blank" rel="noopener">Card Men 7+8<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-7">
         <span class="idx-no">A2·07</span>
         <span class="idx-title">White Rabbit Solo</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">Card Women/Men</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Card Women/Men<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-8">
         <span class="idx-no">A2·08</span>
         <span class="idx-title">Entrance of the Court</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Court Women (6)</span><span class="chip">Court Men (6)</span><span class="chip">King of Hearts</span><span class="chip">Queen</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">White Rabbit</span><span class="chip">Knave</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1rl2lwQeR68qMerdxofghmgZTdTCYnPQK" target="_blank" rel="noopener">Court Men (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Caterpillar<span class="chip-cam">↗</span></a><span class="chip">Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Fish<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-9">
         <span class="idx-no">A2·09</span>
         <span class="idx-title">Queen&#x27;s Tango Solo</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Court Women/Men</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-10">
         <span class="idx-no">A2·10</span>
         <span class="idx-title">Trial</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Caterpillar<span class="chip-cam">↗</span></a><span class="chip">Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Fish<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Solo Card Women/Men (4)<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-11">
         <span class="idx-no">A2·11</span>
         <span class="idx-title">Jack Solo</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><span class="chip">Queen</span><span class="chip">King</span></div>
+      <div class="idx-chars"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-12">
         <span class="idx-no">A2·12</span>
         <span class="idx-title">Alice — It Was Me</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Court</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Court</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-13">
         <span class="idx-no">A2·13</span>
         <span class="idx-title">Trial Pas de Deux</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-14">
         <span class="idx-no">A2·14</span>
         <span class="idx-title">Chase</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span><span class="chip">Hedgehogs (1)</span><span class="chip">Gardeners (3)</span><span class="chip">3 Guards</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Solo Card Women/Men (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs (1)<span class="chip-cam">↗</span></a><span class="chip">Gardeners (3)</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards<span class="chip-cam">↗</span></a></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-15">
         <span class="idx-no">A2·15</span>
         <span class="idx-title">Epilogue</span>
         <span class="idx-exp">▸</span>
       </button>
-      <div class="idx-chars"><span class="chip">Alice (modern)</span><span class="chip">Carroll (modern)</span><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
+      <div class="idx-chars"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (modern)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">Carroll (modern)<span class="chip-cam">↗</span></a><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
     </li></ul>
     </aside>
 
     <div class="scenes">
       
+<section class="scene preset" id="preset-act1">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">SET</span><span class="scene-no">▦</span></span>
+    <span class="scene-titles"><span class="scene-title">Preset de primer acto</span><span class="scene-sub">Chequeo de utilería antes de empezar — hombros y escena</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr">Disposición previa al inicio del Acto 1: hombro Viamonte, hombro Tucumán y elementos preseteados en escena. Entre paréntesis, la escena en la que entra cada elemento.</p>
+    <div class="block"><h4>Disposición de utilería</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Parasol dorado + manta / almohadón (esc. 1)</li><li>Bolso-cámara que crece (esc. 1)</li><li>Cochecito con bebé (esc. 1)</li><li>Biblia (esc. 1)</li><li>Corazones de papel (esc. 1)</li><li>Pulgar trucado y pañuelo (esc. 1)</li><li>Conejo blanco en galera negra (esc. 1)</li><li>Mano de cartas (esc. 1)</li><li>Lata de algodón flash (esc. 1)</li><li>2 alabardas (esc. 2)</li><li>Bandeja liviana de tartaletas con correa (esc. 2 y 14)</li><li>Abanico blanco (esc. 4)</li><li>Botella sobre vara (esc. 4)</li><li>1 bandera de largada (esc. 5)</li><li>Bebé (esc. 8) — proscenio</li><li>Reloj despertador (esc. 10)</li><li>Bolsa de agua caliente (esc. 10) — hombro 2</li><li>Tetera (esc. 10) — frente al proscenio</li><li>Parasol azul (esc. 12)</li><li>Cola azul estilo chino (esc. 12)</li><li>2 alabardas (esc. 14)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Deanery (esc. 1): mesa con mantel en diagonal, 10 cubiertos, tetera, 2 jarras de leche, 2 azucareras, servilletas, 4 tazas con plato, 10 platos; caja con 4 tazas debajo</li><li>Deanery (esc. 1), piso: cámara trucada con funda de seda, flash de mano en gancho, anteojos del Conejo bajo la seda, abanico blanco en el banco, bolso de Lewis Carroll con anotador</li><li>Costume prop: reloj de bolsillo (White Rabbit, esc. 1)</li><li>Pig &amp; Pepper (esc. 8): Kitchen truck con 5 ollas con cerdos, picadora con cerdo de patas móviles, 2 cuchillas (1 goma, 1 metal)</li><li>Mad Hatter (esc. 10): asiento cupcake con jarra, 2 tazas y platos adentro</li><li>Caterpillar (esc. 12): Mushroom truck con malvavisco en plato debajo</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Bandeja pesada de tartaletas (esc. 1)</li><li>1 Victoria sponge (esc. 1)</li><li>Soporte de cupcakes (esc. 1)</li><li>Sándwiches en soporte + 2 con velcro (esc. 1)</li><li>Gelatina temblorosa (esc. 1)</li><li>Pila de 6 tazas y platos (esc. 1)</li><li>Tetera + 2 repasadores (esc. 1)</li><li>Trug: 11 rosas blancas + 1 rosa roja larga (esc. 1)</li><li>1 rosa roja corta (esc. 1)</li><li>Valija (esc. 1)</li><li>3 libros atados + 1 libro suelto (esc. 1)</li><li>3 mazos de croquet, 2 pelotas, 2 aros (esc. 1)</li><li>Armario de Queen of Hearts (esc. 2) — hombro 2</li><li>Pastel real &#x27;Eat me&#x27; sobre brazo extensible (esc. 2)</li><li>Invitación en cartón (esc. 7)</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="scene" id="scene-1-1" data-search="prologue the deanery (en el pasado) alice (1 + 2) carroll / white rabbit (como carroll) jack (como jack) mother father duchess cook edita lorina magician vicar verger raj butler indian servant footman/fish footman/frog maids (3) raj wives (2)">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">01</span></span>
@@ -403,7 +433,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice (1 + 2)</span><span class="chip">Carroll / White Rabbit (como Carroll)</span><span class="chip">Jack (como Jack)</span><span class="chip">Mother</span><span class="chip">Father</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Edita</span><span class="chip">Lorina</span><span class="chip">Magician</span><span class="chip">Vicar</span><span class="chip">Verger</span><span class="chip">Raj</span><span class="chip">Butler</span><span class="chip">Indian Servant</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Maids (3)</span><span class="chip">Raj Wives (2)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (1 + 2)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">Carroll / White Rabbit (como Carroll)<span class="chip-cam">↗</span></a><span class="chip">Jack (como Jack)</span><a class="chip chip-link" href="https://drive.google.com/file/d/1DB9nmxX1TnWpT2qIqvgL_50DparqY7u2/view" target="_blank" rel="noopener">Mother<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">Father<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1OcWCdRAF49c5ATXhta_o393RWHaTIeRe/view" target="_blank" rel="noopener">Edita<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1Q5Ei4t5vfZKmMk0_sYY37S8OI5CftmsU/view" target="_blank" rel="noopener">Lorina<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/16AdOEbr-DrlG2pdGeSMvrjd11D9PuhSU/view" target="_blank" rel="noopener">Magician<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1460GjTiqr8utTPSa4JnO8YV1M6dqD6VG/view" target="_blank" rel="noopener">Vicar<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Verger<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Raj<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Butler<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/17tnhS2kyuz_ChCkQHaUIqfOkjSECr5aT/view" target="_blank" rel="noopener">Indian Servant<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1DNj89mbLwmOEFktZ1efalwQ5JE9AqFLY/view" target="_blank" rel="noopener">Maids (3)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/16FM8JWAmFbAjCPS84xWSxOlqmFJyqCSU/view" target="_blank" rel="noopener">Raj Wives (2)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -418,10 +448,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de hada lila (corpiño de satén lila, mangas de organza, pollera de tul con lentejuelas, alas, vincha, medias rosas, puntas rosas)</li><li>Mother — vestido victoriano verde claro, gargantilla, sombrero de paja de ala ancha (se quita en escena), delantal de organza</li><li>Cook — blusa negra de cuello blanco festoneado, delantal blanco, cofia, botas con cordones</li><li>Maids — blusa de algodón blanca, pollera de lana negra, delantal y cofia blancos</li><li>Raj Wives — top de brocato crema, sari de gasa con borde dorado, tiara</li><li>Carroll/Rabbit — camisa de cuello de alas, frac, chaleco a cuadros (zapatos: jazz negros / Adidas)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Telón baja — se señaliza el inicio de función</li><li>Plataforma de marioneta preseteada (Alice puppet +3.5M guardada en wing Tucumán durante el preset del Deanery)</li><li>Proyección F.O.H. usada para el Deanery (proyectores Casio)</li><li>9 min: trolley empujado fuerte hacia SR, 2º hombro</li><li>11 min: fuego en flash de cámara; la cámara deja de girar en el blackout</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Telón baja — se señaliza el inicio de función</li><li>Apertura de la mesa del Deanery (mesa larga con orificio) — Efectos Escénicos</li><li>Plataforma de marioneta preseteada (Alice puppet +3.5M guardada en wing Tucumán durante el preset del Deanery)</li><li>Proyección F.O.H. usada para el Deanery (proyectores Casio)</li><li>9 min: trolley empujado fuerte hacia SR, 2º hombro</li><li>11 min: fuego en flash de cámara; la cámara deja de girar en el blackout</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Antes de empezar: informar a técnicos quién es Queen y Rabbit hoy (trampa de piso y vestido rojo se ajustan). Verificar que las ruedas de la mesa larga estén trabadas.</li><li>Inicio: banco + Alice + 2 hermanas en el piso, cámara y Conejo blanco.</li><li>Pre-show: revisar orden y limpieza del escenario (sin cables) en SL y SR; piso de danza y monitores; resina y agua en SL+SR; luces de balizamiento.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1rw96NwqDuKgCl1KGqzzk54dPx8mBf4qg/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>A · 1.10 The Deanery (Prologue)</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rNOIl1ciTvaaR00ooD41h15yxkEmgOeH/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Parasol (Deanery)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1pW7mzIGwiFElU4_bzg1rzlHpu--TNaap/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1qyHQRL9IOOhLn2E3O3bv1xJ-9MQtrfjq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Banco del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1QLvI6L9Rj5D6TuypMjk2AQuaa6wHLHKm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1e5Dj5cm84vX4MmzqwQX-eoHTOB5JYhxD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta pequeña de Alice</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Dvib4NXtjAi_Mm9ljyH2UcbsznFks2xI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Pram (cochecito)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1o6tWtu0C5h33cPPF6-frMC22RUY3ImhO/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Pram 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1f54EkCM0KibkTa8gLSbBLhpRkiG_KS1B/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cajas / cases</span></a><a class="imgcard" href="https://drive.google.com/file/d/1jCg4rUgCcFNDoaa19lejJfAiU0v1_8aq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Acto 1)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a></div></div>
   </div>
 </section>
@@ -436,7 +467,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -451,10 +482,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Falling Alice — remera negra de manga larga, chaqueta kung-fu negra, pantalón negro, capucha, guantes negros, medias negras sobre las zapatillas</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cambio a Falling Alice — ¡ATENCIÓN seguridad! Vigilar especialmente el telón del medio</li><li>Botella &#x27;Drink me&#x27; vuela (bar 17)</li><li>Marioneta de Alice operada desde la plataforma (bar 18)</li><li>Brazo extensible saca el pastel &#x27;Eat me&#x27;</li><li>DOME suelta pétalos</li><li>Biombo elástico volado</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Cambio a Falling Alice — ¡ATENCIÓN seguridad! Vigilar especialmente el telón del medio</li><li>Botella &#x27;Drink me&#x27; vuela (bar 17)</li><li>Marioneta de Alice operada desde la plataforma (bar 18)</li><li>Brazo extensible saca el pastel &#x27;Eat me&#x27;</li><li>DOME (cúpula) suelta pétalos — Efectos Escénicos</li><li>Biombo elástico volado</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>13 min: cambio a Falling Alice — ATENCIÓN seguridad, mirar el telón del medio.</li><li>15 min: luces para Alice cuando se acuesta en el piso (cruz).</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1BzrH59c1SdR2H26FE_VNQ-p4MIoC3BDC/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>E · 1.20 Down the Rabbit Hole</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1FzaoP89lS9I3GAI_5lIZOs5EMUQlYkhx/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/11aYZYSyIzrsLBklY5y5f-GwvVSLfx0a0/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Btw-9dxGKh4tAhnKdIzZd1hru0O4bw3Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 03</span></a><a class="imgcard" href="https://drive.google.com/file/d/1a8Wfaf3FLAoSMUuswo6h_JNvnJH-S25f/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tiny Alice</span></a><a class="imgcard" href="https://drive.google.com/file/d/1HLFTSi24otOMOHBhWepi7ynPz7SKsl5L/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tiny Alice 2</span></a><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a></div></div>
   </div>
 </section>
@@ -469,7 +501,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen (Queen 1)</span><span class="chip">Knave of Hearts</span><span class="chip">Guard (Indian Servant)</span><span class="chip">3 Guards (figuración)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Queen 1)<span class="chip-cam">↗</span></a><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/17tnhS2kyuz_ChCkQHaUIqfOkjSECr5aT/view" target="_blank" rel="noopener">Guard (Indian Servant)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards (figuración)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -484,14 +516,15 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido lila de tafetán (cambio de 1 min 41 s desde el vestido de hada)</li><li>White Rabbit — frac, galera negra</li><li>Knave — tops rojo/blanco elásticos, medias rojas</li><li>Queen — (Mother aún) transición hacia Queen of Hearts</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Operación de la puerta remota</li><li>Hall gauze (gasa) en posición</li><li>Biombo elástico volado</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Operación de la puerta pequeña (Small Door) — Efectos Escénicos</li><li>Hall gauze (gasa) en posición</li><li>Biombo elástico volado</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>17 min: si la puertita no opera, asegurar que la chica de negro salga a escena (parada en wing nº 2 SR).</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/17jj_zV3Bh15cB6qwS2yhCRPGonOiI7vO/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>F · 1.31 The Hallway</span></a><a class="imgcard plan" href="https://drive.google.com/file/d/182QlU2zlIWWjybTsGPT0ElY0ewH8lRXt/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>G · 1.32 The Hallway (growing)</span></a><a class="imgcard plan" href="https://drive.google.com/file/d/11FTiMmP7rNaP84JAfogwqAVe0y2a-K6e/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>H · 1.33 The Small Room</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a><a class="imgcard" href="https://drive.google.com/file/d/14IZbZnxCHq8xOW4uc6EOd72dQeW18_AS/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (2)</span></a></div></div>
   </div>
 </section>
-<section class="scene" id="scene-1-4" data-search="pool of tears el charco de lágrimas alice caucus animals (8): turtle, lory, eaglet, hamster, cat, mouse, monkey, owl, beagle edita → eaglet lorina → lory tear boys (6)">
+<section class="scene" id="scene-1-4" data-search="pool of tears el charco de lágrimas alice edita → eaglet lorina → lory tear boys (6)">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">04</span></span>
     <span class="scene-titles"><span class="scene-title">Pool of Tears</span><span class="scene-sub">El charco de lágrimas</span></span>
@@ -502,7 +535,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Caucus Animals (8): Turtle, Lory, Eaglet, Hamster, Cat, Mouse, Monkey, Owl, Beagle</span><span class="chip">Edita → Eaglet</span><span class="chip">Lorina → Lory</span><span class="chip">Tear boys (6)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1OcWCdRAF49c5ATXhta_o393RWHaTIeRe/view" target="_blank" rel="noopener">Edita → Eaglet<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1Q5Ei4t5vfZKmMk0_sYY37S8OI5CftmsU/view" target="_blank" rel="noopener">Lorina → Lory<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1q2F8v-aiodBaMPT_-GDykSxTTnghSNz9/view" target="_blank" rel="noopener">Tear boys (6)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -516,11 +549,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
     </div>
 
     <div class="grid2">
-      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile (dance dress)</li><li>Eaglet/Lory — personajes-animales (puntas pintadas: Lory verde a cuadros, Eaglet gris)</li><li>Turtle — puntas amarillo mostaza; Beagle — pardo rojizo; Owl — zapatillas negras</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Sistema de olas (tela)</li><li>Bote sobre vara (Tucumán)</li><li>Botella sobre vara (Viamonte)</li></ul></div>
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile (dance dress)</li><li>Edita / Lorina (si se usan como Eaglet / Lory) — puntas pintadas</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Sistema de olas (tela)</li><li>Bote sobre vara (Tucumán)</li><li>Botella sobre vara (Viamonte)</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>25 min: ningún bailarín puede pararse sobre la tela cuando suben las olas.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1R41Hj4xrRlhhtInzla2SsBzrHuBa477j/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>I · 1.40 Pool of Tears</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/19jVW_6XvP48hCa7vxcLLEqjAE7tbHME6/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote / botella para olas</span></a><a class="imgcard" href="https://drive.google.com/file/d/1glHf3LEN9oLKUcws9Y5zbdTnE0yrzpQI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición del bote DS Tucumán</span></a><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a></div></div>
   </div>
 </section>
@@ -535,7 +569,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice (3)</span><span class="chip">(según versión: Caucus Animals / Rooster — confirmar con dirección)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (3)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1g3AYd8Mx3OJ9h6v3QtWvlHqiHIje_83_/view" target="_blank" rel="noopener">(según versión: Caucus Animals / Rooster — confirmar con dirección)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -550,10 +584,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cronómetro volado (flown stopwatch)</li><li>Bandera de largada</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Cronómetro volado (flown stopwatch)</li><li>Bandera de largada</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>⚠ Esta escena difiere entre versiones. En el material de origen la &#x27;Caucus Race&#x27; incluye disparo de pistola (Rooster + Alice). Confirmar si el Colón conserva el disparo y la coreografía de carrera.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1R41Hj4xrRlhhtInzla2SsBzrHuBa477j/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>I · 1.40 Pool of Tears</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -568,7 +603,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -583,10 +618,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Bote trucado entra rodando</li><li>Proyección de libélula (Dragonfly)</li><li>Cuadro &#x27;Home Sweet Home&#x27; baja con gancho</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Bote trucado entra rodando</li><li>Proyección de libélula (Dragonfly)</li><li>Cuadro &#x27;Home Sweet Home&#x27; baja con gancho</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>31 min: ningún bailarín en escena cuando se cambia a &#x27;Home Sweet Home&#x27;.</li><li>38 min: cuidar que los bailarines no sean golpeados cuando &#x27;Home Sweet Home&#x27; vuelve a bajar.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/10qUULxPRSd0v91GRW2ZQu7D61oDuEwMI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>J · 1.50 Paper Boat / Fish &amp; Frog</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a><a class="imgcard" href="https://drive.google.com/file/d/1glHf3LEN9oLKUcws9Y5zbdTnE0yrzpQI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición del bote DS Tucumán</span></a></div></div>
   </div>
 </section>
@@ -601,7 +637,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Cook</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -616,10 +652,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Fish — librea, zapatillas grises pintadas</li><li>Frog — librea, zapatillas verdes pintadas</li><li>Duchess — corsé acolchado, crinolina, guantes largos</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Kitchen truck en posición (carpinteros)</li><li>Picadora con cerdo de patas móviles</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Kitchen truck en posición</li><li>Picadora con cerdo de patas móviles</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/10qUULxPRSd0v91GRW2ZQu7D61oDuEwMI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>J · 1.50 Paper Boat / Fish &amp; Frog</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1jCg4rUgCcFNDoaa19lejJfAiU0v1_8aq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Acto 1)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a></div></div>
   </div>
 </section>
@@ -634,7 +671,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Cook</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Queen 1 (al cierre, &#x27;The Knave&#x27;)</span><span class="chip">King of Hearts</span><span class="chip">Executioner</span><span class="chip">Guard</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Footman/Fish<span class="chip-cam">↗</span></a><span class="chip">Footman/Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen 1 (al cierre, &#x27;The Knave&#x27;)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guard<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -649,10 +686,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Cook — delantal manchado de rosa, camisa de lino envejecida</li><li>Duchess — delantal ensangrentado (bloodied apron)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Kitchen truck operado por carpinteros</li><li>Cambio de escena: se retira silla y bebé a Viamonte</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Kitchen truck en movimiento</li><li>Cambio de escena: se retira silla y bebé a Viamonte</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>30 min: disparo (gunshot).</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1oLSV5ojqsQ1nNEOOvurUDN8WxBFhBZ0I/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>K · 1.70 Pig and Pepper</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a><a class="imgcard" href="https://drive.google.com/file/d/1nDUyAhkDLFrNTTKfe5Z6_QjAApM67x05/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán (2)</span></a></div></div>
   </div>
 </section>
@@ -667,7 +705,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Cheshire Cat (cabeza)</span><span class="chip">Cheshire Cat (7 piezas)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (cabeza)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (7 piezas)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -682,10 +720,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras (Costume Dept.)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Mad Hatter&#x27;s cloth en posición</li><li>Piezas del Gato armadas desde DS Viamonte</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Mad Hatter&#x27;s cloth en posición</li><li>Piezas del Gato armadas desde DS Viamonte</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/146gFlbKy47s_4qoe08PPcWCFq2f_za-Y/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>L · 1.80 Cheshire Cat / Mad Hatter Tea</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/16Z_UJ8tJVf52tyjVumVzkUEhq0Yz6N22/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cara del Gato (Cat Face)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rvnxY8MFlO-a2h74wCG3S9eqV6fqKxVM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta del Gato</span></a><a class="imgcard" href="https://drive.google.com/file/d/1R743URs20d0b2pjhFGISfL53pqN5URoE/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Caras del Gato en soporte</span></a><a class="imgcard" href="https://drive.google.com/file/d/1XzSNvFa0dZZlkoo6fcYY42A2itiLYA0a/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Piezas del Gato (Tucumán, Acto 1)</span></a></div></div>
   </div>
 </section>
@@ -700,7 +739,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -715,10 +754,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Preparación del Theatre truck (Mad Hatter) detrás del telón del medio</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Preparación del Theatre truck (Mad Hatter) detrás del telón del medio</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>⚠ Momento &#x27;Tik Tok&#x27; (reloj). Confirmar contenido exacto con la dirección coreográfica del Colón.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/146gFlbKy47s_4qoe08PPcWCFq2f_za-Y/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>L · 1.80 Cheshire Cat / Mad Hatter Tea</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1JvQDzYzJRHrd_v0_9Qe_jTcJOOy56TXr/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tetera</span></a></div></div>
   </div>
 </section>
@@ -733,7 +773,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Mad Hatter (Magician)</span><span class="chip">March Hare (Vicar)</span><span class="chip">Dormouse (Verger)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter (Magician)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare (Vicar)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse (Verger)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -748,10 +788,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Mad Hatter — galera, frac de retazos (zapatos de tap negros)</li><li>March Hare — orejas y cola de liebre, blazer a rayas amarillas</li><li>Dormouse — chaleco rosa y dorado, cola de ratón larga, pompones rojos</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Theatre truck (Mad Hatter) entra — operado por carpinteros</li><li>Mad Hatter&#x27;s cloth #2</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Theatre truck (Mad Hatter) entra</li><li>Mad Hatter&#x27;s cloth #2</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>7 min (Acto 2 del esquema danés): ATENCIÓN seguridad en el cambio del Mad Hatter.</li><li>26 min: después del vals de las flores, llamar maquilladores: &#x27;todos los maquilladores disponibles a bambalinas&#x27;.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/146gFlbKy47s_4qoe08PPcWCFq2f_za-Y/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>L · 1.80 Cheshire Cat / Mad Hatter Tea</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1baWHIccM-K0GAzEoDRd2AdJLeZ7fSMQR/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mad Hatter&#x27;s (sombrerero)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1etfafnSX5BHEcCXtsuZdC33cqWSU5DBA/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mad Hatter&#x27;s Theatre (truck)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1_aZQNdQyWzerIrd-6x5AqLRGHtm86vtM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cupcake (asiento)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1WEHDQOa5nfAcgri-DAjXmwW15w1OJoe_/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cupcakes y Victoria Sponge</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Kudkd2UcLJwS7SY34b2FE_KK1I3ELSc_/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla roja de ópera y cubo de azúcar</span></a><a class="imgcard" href="https://drive.google.com/file/d/1JvQDzYzJRHrd_v0_9Qe_jTcJOOy56TXr/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tetera</span></a></div></div>
   </div>
 </section>
@@ -766,7 +807,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Cheshire Cat (4 piezas)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1YHaonYHxnzhhrOgzRiAK_s3fn71T0ccM/view" target="_blank" rel="noopener">Cheshire Cat (4 piezas)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -781,10 +822,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Negro total (full black)</li><li>Gasa azul: bleedthru y vuelo</li><li>Mad Hatter&#x27;s cloth</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Negro total (full black)</li><li>Gasa azul: bleedthru y vuelo</li><li>Mad Hatter&#x27;s cloth</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/14J0bxrwOFH5IZY52OikTsBHwfNRY0CFo/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>B · 1.100 2nd Cat &amp; Caterpillar</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rvnxY8MFlO-a2h74wCG3S9eqV6fqKxVM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta del Gato</span></a><a class="imgcard" href="https://drive.google.com/file/d/1R743URs20d0b2pjhFGISfL53pqN5URoE/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Caras del Gato en soporte</span></a></div></div>
   </div>
 </section>
@@ -799,7 +841,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Raj → Caterpillar</span><span class="chip">Caterpillar Women (4)</span><span class="chip">Caterpillar Tail (8)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Raj → Caterpillar<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18cxTQ-gOsJQs65106iHWSRzHHUmQC-R_/view" target="_blank" rel="noopener">Caterpillar Women (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18cxTQ-gOsJQs65106iHWSRzHHUmQC-R_/view" target="_blank" rel="noopener">Caterpillar Tail (8)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -814,10 +856,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Caterpillar/Raj — zapatillas color piel + zapatos dorados enrollados</li><li>Caterpillar Tail — puntas azul/violeta pintadas</li><li>Edita vestida de personaje chino (saco de brocato rosa, sombrero chino)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Mushroom truck en posición (carpinteros)</li><li>Negro total + gasa azul</li><li>Peasouper (máquina de niebla) ×2</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Mushroom truck en posición</li><li>Negro total + gasa azul</li><li>Peasouper (máquina de niebla) ×2</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>15 min: ayudar a Jonathan/Andreas/Ryan a montar la oruga (sostener las correas).</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/14J0bxrwOFH5IZY52OikTsBHwfNRY0CFo/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>B · 1.100 2nd Cat &amp; Caterpillar</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1TJQO6oC7VVMAaasQMlzspieJs-IvUVdc/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Hongo del Caterpillar</span></a><a class="imgcard" href="https://drive.google.com/file/d/11SSD0Vn2KRzPgZAcSn7hLYvACORf0hNs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Parasol del Caterpillar</span></a></div></div>
   </div>
 </section>
@@ -832,7 +875,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -847,10 +890,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Negro total</li><li>Hall gauze en posición</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Negro total</li><li>Hall gauze en posición</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1PySi-8O5tnGnqG5GllLCoRhusecVWJPA/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>C · 1.120 Hall of Doors</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a></div></div>
   </div>
 </section>
@@ -865,7 +909,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Flower Soloist Women (4)</span><span class="chip">Flower Women (6)</span><span class="chip">Flower Soloist Men (4)</span><span class="chip">Flower Man (6)</span><span class="chip">Knave of Hearts</span><span class="chip">Guards (2)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1SNph4xWGF99a6rgeWyl5n571BpyKt5Ek" target="_blank" rel="noopener">Flower Soloist Women (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1SNph4xWGF99a6rgeWyl5n571BpyKt5Ek" target="_blank" rel="noopener">Flower Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1d5UDmOHY-HrWim26m1yL6B4hkYORRBIv/view" target="_blank" rel="noopener">Flower Soloist Men (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1d5UDmOHY-HrWim26m1yL6B4hkYORRBIv/view" target="_blank" rel="noopener">Flower Man (6)<span class="chip-cam">↗</span></a><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guards (2)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -880,13 +924,31 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Flower Women/Men — vinchas florales (la de Alice pasa a la versión flor en Acto 2)</li><li>Flower Men — zapatillas pintadas (verde, violeta, amarillo, naranja)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cierre del Acto 1 — el hacha cae (intervalo)</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Cierre del Acto 1 — el hacha cae (intervalo)</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>28 min (esquema danés): al final del acto, los guardias salen por SR con lanzas grandes — debe haber paso libre.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1BVr1iX9iOScgAaxz1n56jmfZpmzfF7Iq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>D · 1.130 Flowers</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a></div></div>
   </div>
 </section><div class="interval"><span>I N T E R V A L O</span></div>
+<section class="scene preset" id="preset-interval">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">SET</span><span class="scene-no">▦</span></span>
+    <span class="scene-titles"><span class="scene-title">Preset de intervalo</span><span class="scene-sub">Reseteo de utilería para el Acto 2</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr">Disposición durante el intervalo para el Acto 2 (Jardín de la Reina y Corte). &#x27;Reset del Acto 1&#x27; indica elementos que vuelven desde el primer acto.</p>
+    <div class="block"><h4>Disposición de utilería</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>8 marionetas de cara de gato sobre varas (hombro 4)</li><li>2 flamencos (esc. 1)</li><li>1 hedgehog football (esc. 1)</li><li>1 pila de plumas rosas (esc. 1)</li><li>Cuerno de carnero (esc. 1)</li><li>Esposas de soga (esc. 1)</li><li>Bandeja pesada de tartaletas con 3 velcro (esc. 1)</li><li>4 alabardas (esc. 1)</li><li>Banco rojo (hombro 1, esc. 1)</li><li>1 bandeja liviana con 3 tartaletas con velcro (esc. 2)</li><li>Cuchilla de goma (la conserva la Cook desde esc. 1)</li><li>Cetro (esc. 2)</li><li>Reset del Acto 1: bolsa de agua caliente y despertador (esc. 2)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Jardín de la Reina / Maze (esc. 1): 3 arbustos de rosas (el central por control remoto), 6 setos cónicos, 5 setos esféricos</li><li>The Court (esc. 2): periódico bajo el trono del King (Viamonte); gavel junto al trono sobre el truck USC; silla roja frente al truck mirando a escena; pedestal de tartaletas (centro)</li><li>Deanery Epílogo (esc. 3): libro de Alice sobre el banco; cartel &#x27;Teas&#x27;</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>2 flamencos (esc. 1)</li><li>3 hedgehog footballs (esc. 1)</li><li>3 pilas de plumas rosas (esc. 1)</li><li>Cetro de corazón (esc. 1)</li><li>Hacha de utilería (esc. 1)</li><li>Hacha de metal (esc. 1)</li><li>Cuchilla de goma (esc. 1)</li><li>Armario GIGANTE de Queen of Hearts (hombro 1, esc. 1)</li><li>1 bandeja con tartaleta suelta (esc. 2)</li><li>2 alabardas (esc. 2)</li><li>1 cabeza decapitada (esc. 2)</li><li>Cámara con correa (esc. 3)</li><li>iPhone y Beatbox (esc. 3)</li><li>Máquina de escribir (hombro 3, esc. 2)</li><li>Trapo en el corte de corazón + 2 hojas A4 rosas en la máquina (esc. 2)</li><li>Banqueta de corazón (hombro 1, esc. 2)</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="scene" id="scene-2-1" data-search="gardeners the queen of hearts garden (maze) · marcas verdes gardeners (3) hedges (6, niños) hedgehogs (4, niños) alice white rabbit knave duchess cook executioner 3 guards">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">01</span></span>
@@ -898,7 +960,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><span class="chip">Hedgehogs (4, niños)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">3 Guards</span></div>
+      <div class="chips"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs (4, niños)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -913,10 +975,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — corpiño de corazón rojo, tutú rojo, corona, puntas rojas</li><li>Gardeners — botas especiales verde/rojo</li><li>Flamingo Ladies — puntas rosas</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Setos cónicos sobre ruedas entran (estudiantes adentro)</li><li>Arbusto de rosas central por control remoto</li><li>Armario gigante de la Reina entra desde DSPS1</li><li>Banco rojo en Viamonte 1</li><li>Reset de alabardas del Acto 1</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Setos cónicos sobre ruedas entran (estudiantes adentro)</li><li>Arbusto de rosas central por control remoto</li><li>Armario gigante de la Reina entra desde DSPS1</li><li>Banco rojo en Viamonte 1</li><li>Reset de alabardas del Acto 1</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Antes del Acto 3 (danés): los niños colocan sus setos — 3 de cada lado.</li><li>16 min: luces para la salida de los setos por SR atrás — o standby pértiga 23 SL. ¡Seguridad!</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1j0OKGcqqMY8wUA9pWYzv3fgXfFYmRGj1/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>M · 2.1 Queen of Hearts Garden</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a><a class="imgcard" href="https://drive.google.com/file/d/1HaGVQprSW2OhOeWk-XOZoAD-bvuKEIcs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Arbustos de rosas</span></a><a class="imgcard" href="https://drive.google.com/file/d/1uy28-Zt6EZRVANr5swV1em2hfdFIrGYk/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Setos cónicos (cone hedges)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1zof8ebooaKEbkzaInsOnYSRBPYAN6_9i/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Armario grande de la Reina</span></a></div></div>
   </div>
 </section>
@@ -931,7 +994,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Queen (Big Box)</span><span class="chip">King of Hearts</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><span class="chip">Alice</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Big Box)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -946,10 +1009,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — sale del &#x27;Big Box&#x27; (vestido-prop de madera roja)</li><li>King of Hearts — botas jazz negras, zapatos rococó rojos</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Armario gigante / Big Box: la Reina emerge</li><li>Podium truck con tronos en posición (carpinteros)</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Armario gigante / Big Box: la Reina emerge</li><li>Podium truck con tronos en posición</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>2:1 (running): se entregan 2 alabardas a los guardias en Tucumán una vez que la Reina &#x27;grande&#x27; entró.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1j0OKGcqqMY8wUA9pWYzv3fgXfFYmRGj1/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>M · 2.1 Queen of Hearts Garden</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1J-3HGDAYWWQ-usBefBOqRK3pSC4Z6ozP/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/1vpxVz_WJZMSBPgKudrPCsN5K1ipZwLMm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rx62T-Rb4coRwqY-3zOCAE9vVAEYAz2Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 03</span></a><a class="imgcard" href="https://drive.google.com/file/d/1zof8ebooaKEbkzaInsOnYSRBPYAN6_9i/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Armario grande de la Reina</span></a></div></div>
   </div>
 </section>
@@ -964,7 +1028,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Tart Suitors (4)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1rl2lwQeR68qMerdxofghmgZTdTCYnPQK" target="_blank" rel="noopener">Tart Suitors (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -979,10 +1043,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Tart Suitors / Court Men — zapatillas rojas o negras pintadas (con velcro cosido)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+      <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1j0OKGcqqMY8wUA9pWYzv3fgXfFYmRGj1/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>M · 2.1 Queen of Hearts Garden</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1slptRWsLy7Dwhj6NghGn4HUOndm16NzQ/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Actos 1 y 2)</span></a></div></div>
   </div>
 </section>
@@ -997,7 +1062,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Queen (Big Box)</span><span class="chip">White Rabbit</span><span class="chip">Flamingo (5)</span><span class="chip">Alice</span><span class="chip">Hedges (6)</span><span class="chip">Hedgehogs</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen (Big Box)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1BFg8GYvJjcT1Y3_8kBs2F3V_NaVKccnn/view" target="_blank" rel="noopener">Flamingo (5)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Hedges (6)</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1012,10 +1077,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Flamingo Ladies — puntas rosas</li><li>Hedgehogs (niños) — zapatillas marrones pintadas</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Setos en posición de juego</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Setos en posición de juego</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>17 min: NO debe haber bailarines en el escenario cuando la maquinaria hace el gran cambio al escenario corto (torres de castillo de cartas). Retirar restos de setos y plumas de flamenco. ¡Seguridad pértiga 23 SL!</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1j0OKGcqqMY8wUA9pWYzv3fgXfFYmRGj1/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>M · 2.1 Queen of Hearts Garden</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a></div></div>
   </div>
 </section>
@@ -1030,7 +1096,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Knave of Hearts</span><span class="chip">Guards</span><span class="chip">Executioner</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+      <div class="chips"><span class="chip">Knave of Hearts</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">Guards<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1045,10 +1111,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Knave — rojo</li><li>Executioner — casco negro</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Gauze frontal #1 (bar 27)</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Gauze frontal #1 (bar 27)</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Transición Court: 2:1 hacia 2:2 — las alabardas se manejan Viamonte↔Tucumán; recoger al salir con el prisionero.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1j0OKGcqqMY8wUA9pWYzv3fgXfFYmRGj1/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>M · 2.1 Queen of Hearts Garden</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -1063,7 +1130,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">PT Card Women (6)</span><span class="chip">PT Card Men (6)</span><span class="chip">Card Women 7+8</span><span class="chip">Card Men 7+8</span><span class="chip">Alice</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">PT Card Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1RoF8-0YLdebHBiuKBxB6tOw6VBaFdni6" target="_blank" rel="noopener">PT Card Men (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Card Women 7+8<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1RoF8-0YLdebHBiuKBxB6tOw6VBaFdni6" target="_blank" rel="noopener">Card Men 7+8<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1078,10 +1145,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Card Women/Men — corps de cartas (puntas rosas / zapatillas blancas)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>USC truck (podio) con tronos y gavel en posición</li><li>Colchones preseteados para la persecución/caídas</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>USC truck (podio) con tronos y gavel en posición</li><li>Colchones preseteados para la persecución/caídas</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1m5f4XUAEkew_94UIvZmokxv3Uv6IggVD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Máquina de escribir y mesa</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rNww4ykHAiWShY623Ur7srEa2Esg2Kkj/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición armario chico Reina (Tucumán)</span></a></div></div>
   </div>
 </section>
@@ -1096,7 +1164,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">Card Women/Men</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Card Women/Men<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1111,10 +1179,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>White Rabbit — frac rojo (cambio desde Carroll)</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+      <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1O3UC1C88CG4ybId7CLFwjHaXBkvRbqnS/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 04</span></a></div></div>
   </div>
 </section>
@@ -1129,7 +1198,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Court Women (6)</span><span class="chip">Court Men (6)</span><span class="chip">King of Hearts</span><span class="chip">Queen</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">White Rabbit</span><span class="chip">Knave</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1rl2lwQeR68qMerdxofghmgZTdTCYnPQK" target="_blank" rel="noopener">Court Men (6)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King of Hearts<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Caterpillar<span class="chip-cam">↗</span></a><span class="chip">Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Fish<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Knave</span></div>
     </div>
 
     <div class="block">
@@ -1144,10 +1213,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Court Women — zapatos Rokko</li><li>Court Men — zapatillas rojas/negras pintadas</li><li>El King/Mad Hatter/March Hare/Dormouse vuelven en sus roles de la Corte</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Entrada de la Corte sobre el truck USC</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Entrada de la Corte sobre el truck USC</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1J-3HGDAYWWQ-usBefBOqRK3pSC4Z6ozP/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/1vpxVz_WJZMSBPgKudrPCsN5K1ipZwLMm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 02</span></a></div></div>
   </div>
 </section>
@@ -1162,7 +1232,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Court Women/Men</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1177,10 +1247,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — tutú rojo, puntas rojas</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+      <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rx62T-Rb4coRwqY-3zOCAE9vVAEYAz2Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 03</span></a></div></div>
   </div>
 </section>
@@ -1195,7 +1266,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1CmYLLAW9DeY2-SMoEr3w2RywIDkb1eRS/view" target="_blank" rel="noopener">Mad Hatter<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/175ha_QNtGvtYyN0piGV0V-W7E5zqcVzI/view" target="_blank" rel="noopener">March Hare<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1sOJMXvx2uJv08Z6HvlVF2zZ58UmHow66/view" target="_blank" rel="noopener">Dormouse<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/14o3weM7MJO8oV0PFJ1-E67uzp2iXc4zF/view" target="_blank" rel="noopener">Caterpillar<span class="chip-cam">↗</span></a><span class="chip">Frog</span><a class="chip chip-link" href="https://drive.google.com/file/d/1XmC9VwT_mkYfMl9MmjcLjKByfAPMZaS1/view" target="_blank" rel="noopener">Fish<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1HONp1PT0ab1t5uJRr7zoVBOjcVhwT0qK/view" target="_blank" rel="noopener">Executioner<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Solo Card Women/Men (4)<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1210,10 +1281,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Vuelven todos los personajes de la Corte en versión &#x27;juicio&#x27;</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Máquina de escribir en mesa rodante operada en escena</li><li>Gavels y soporte en posición</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Máquina de escribir en mesa rodante operada en escena</li><li>Gavels y soporte en posición</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1m5f4XUAEkew_94UIvZmokxv3Uv6IggVD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Máquina de escribir y mesa</span></a></div></div>
   </div>
 </section>
@@ -1228,7 +1300,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><span class="chip">Queen</span><span class="chip">King</span></div>
+      <div class="chips"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1243,10 +1315,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Knave — zapatillas rojas/marrones pintadas</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+      <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -1261,7 +1334,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Court</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><span class="chip">Knave</span><span class="chip">Court</span></div>
     </div>
 
     <div class="block">
@@ -1276,10 +1349,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+      <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -1294,7 +1368,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
     </div>
 
     <div class="block">
@@ -1309,10 +1383,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice y Knave — vestuario de Corte</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Colchones preseteados</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Colchones preseteados</li></ul></div>
     </div>
 
     
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -1327,7 +1402,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span><span class="chip">Hedgehogs (1)</span><span class="chip">Gardeners (3)</span><span class="chip">3 Guards</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice<span class="chip-cam">↗</span></a><span class="chip">Knave</span><a class="chip chip-link" href="https://drive.google.com/file/d/1VxJLmOkX-moyMrJ8w08IZrNAxAPMVZ8q/view" target="_blank" rel="noopener">Queen<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1v0DuYqoTdvAXTyAQeVF6SAKkMShQ-Epw/view" target="_blank" rel="noopener">King<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">White Rabbit<span class="chip-cam">↗</span></a><span class="chip">Duchess</span><a class="chip chip-link" href="https://drive.google.com/file/d/1EyyUM-Rq1S9akuiBR6A_chkKoFz8FgoY/view" target="_blank" rel="noopener">Cook<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/14-NkroUyxmIsw_1j80FHqFWyYP_skb6_" target="_blank" rel="noopener">Court Women/Men<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/19ajsi2khTp--XdpZ9AZjNkHMHx61F3Uf" target="_blank" rel="noopener">Solo Card Women/Men (4)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/drive/folders/1FUPq0hOccpysIf1-yCWPXIA3gf12wBxv" target="_blank" rel="noopener">Hedgehogs (1)<span class="chip-cam">↗</span></a><span class="chip">Gardeners (3)</span><a class="chip chip-link" href="https://drive.google.com/file/d/18s9-nUWSKxAvlZU9NU_v5dSPFG84Xn1k/view" target="_blank" rel="noopener">3 Guards<span class="chip-cam">↗</span></a></div>
     </div>
 
     <div class="block">
@@ -1342,10 +1417,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Cambios rápidos hacia el Epílogo: Alice, Rabbit y Jack pasan a ropa moderna</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Gauze frontal #2 (Vortex)</li><li>Negro total</li><li>Cambios rápidos hacia ropa moderna</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Gauze frontal #2 (Vortex)</li><li>Negro total</li><li>Cambios rápidos hacia ropa moderna</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Cambio al epílogo: Alice + novio se sientan en el banco; luces para ellos y avisar listo por canal 2. ¡Seguridad pértiga 23 SL!</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1q79xxFBqo-pmCNUNiGOcvA7liJC-kHPV/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>N · 2.2 The Court</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     
   </div>
 </section>
@@ -1360,7 +1436,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="block">
       <h4>Personajes en escena</h4>
-      <div class="chips"><span class="chip">Alice (modern)</span><span class="chip">Carroll (modern)</span><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
+      <div class="chips"><a class="chip chip-link" href="https://drive.google.com/drive/folders/1zRdHiMjFrmvP4XRiQo1Tm39saqYfV9qf" target="_blank" rel="noopener">Alice (modern)<span class="chip-cam">↗</span></a><a class="chip chip-link" href="https://drive.google.com/file/d/1NcBvgoB5dN-TJLE-4jQF9oa9EFen4RJg/view" target="_blank" rel="noopener">Carroll (modern)<span class="chip-cam">↗</span></a><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
     </div>
 
     <div class="block">
@@ -1375,10 +1451,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice / Carroll / Jack — ropa moderna (cambio rápido ~1 min en SR)</li><li>Photographer — cámara al cuello</li></ul></div>
-      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Set del banco del Deanery</li><li>Cartel &#x27;Teas&#x27; a Tucumán de la puerta del flat del Deanery</li></ul></div>
+      <div class="block"><h4>Maquinaria</h4><ul><li>Set del banco del Deanery</li><li>Cartel &#x27;Teas&#x27; a Tucumán de la puerta del flat del Deanery</li></ul></div>
     </div>
 
     <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Final: Conejo solo en el banco leyendo un libro. Telón baja.</li><li>Telón abajo: retirar el banco del Deanery para los saludos.</li></ul></div>
+    <div class="block"><h4>Planos (PDF) <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard plan" href="https://drive.google.com/file/d/1c87n-ya7Xsuw8xMyLTQ7shfc-a5qJoDB/view" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>O · 2.3 The Deanery (Epilogue)</span></a><a class="imgcard plan" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener"><span class="imgcard-ico">▤</span><span>📁 Carpeta de planos PDF (Buenos Aires)</span></a></div></div>
     <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1qyHQRL9IOOhLn2E3O3bv1xJ-9MQtrfjq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Banco del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1QLvI6L9Rj5D6TuypMjk2AQuaa6wHLHKm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla del Deanery</span></a></div></div>
   </div>
 </section>
@@ -1391,7 +1468,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <div class="wrap">
     <h3>Documentos fuente (Google Drive)</h3>
     <p>Toda la información de esta guía proviene de estos archivos de la carpeta de producción. Los enlaces abren el archivo original en Drive — son solo de consulta; no se modifica nada en la carpeta compartida.</p>
-    <div class="srcgrid"><a class="src" href="https://drive.google.com/file/d/1YNSQxJKQ45Ia4pyu8FZnfhV4zAii0PpG/view" target="_blank" rel="noopener">Props plot (utilería por escena)</a><a class="src" href="https://drive.google.com/file/d/1oMGog7YYzOVdZCD4tOl3zLUDG3HhobkO/view" target="_blank" rel="noopener">Props inventory (inventario completo)</a><a class="src" href="https://drive.google.com/file/d/1YSWBBPSWqYtUu1TkyOjxa2qEIMKf5qd1/view" target="_blank" rel="noopener">OP Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1Ptvh4VZ2yGmWhfOSNxzlrBmoA2qilcvB/view" target="_blank" rel="noopener">PS Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1iX2jb2AGOpybMbPc0BYC0Gk5iI0w1X_N/view" target="_blank" rel="noopener">Running list &amp; armoury numbers</a><a class="src" href="https://drive.google.com/file/d/1-35PUW23rCT8Os_YiRrpSpcVNZEcyejx/view" target="_blank" rel="noopener">Stage Manager doc (running notes)</a><a class="src" href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener">Cue Caller Score (partitura de cues)</a><a class="src" href="https://drive.google.com/file/d/1UODXkqALjzWLrv1NwD1dgFnOucDLXtcm/view" target="_blank" rel="noopener">Costume Cardex (vestuario detallado)</a><a class="src" href="https://drive.google.com/file/d/1DZidW17gbp1p_OlDNyDzk1IZOqmnteBw/view" target="_blank" rel="noopener">Scene Character Breakdown</a><a class="src" href="https://drive.google.com/file/d/1sCs9QUmJBursxbbI3CaP2OlpaCU6STu9/view" target="_blank" rel="noopener">Sceneskema (grilla personajes/escena)</a><a class="src" href="https://drive.google.com/file/d/1gM74w5EwBD416L8dGF8Uq7RbVWIkgZty/view" target="_blank" rel="noopener">Cast list</a><a class="src" href="https://drive.google.com/file/d/1ZbbL-oKA_77u8X-6RLu2N2DdnTXKRkSM/view" target="_blank" rel="noopener">Reference list — zapatos</a><a class="src" href="https://drive.google.com/file/d/1QnOvO1sg6czMoAxT3A1wgkb3t15NfWVU/view" target="_blank" rel="noopener">Dressers lists (vestuaristas)</a><a class="src" href="https://drive.google.com/file/d/1Epo2jkXZXgb8AWFvpCgrJsFxzApIzKLX/view" target="_blank" rel="noopener">Consummables (consumibles por función)</a><a class="src" href="https://drive.google.com/file/d/1buQOvr4EFQz9Ba_avxVO5VD91pj6vORs/view" target="_blank" rel="noopener">Props photos (PDF)</a><a class="src" href="https://drive.google.com/drive/folders/1FN0bu9Ui4iGGhtYJrtejZX4Z1ZywMogl" target="_blank" rel="noopener">📁 Carpeta — Props Photographs</a><a class="src" href="https://drive.google.com/drive/folders/1KkDmRgdx8zhdzf8U8K8Wi9pyjmt-nesD" target="_blank" rel="noopener">📁 Carpeta — Alice costume photos</a><a class="src" href="https://drive.google.com/drive/folders/1bDh1X51MLbxGGcD2j3EUeocG8I2Tijmw" target="_blank" rel="noopener">📁 Carpeta raíz de la producción</a></div>
+    <div class="srcgrid"><a class="src" href="https://drive.google.com/file/d/1YNSQxJKQ45Ia4pyu8FZnfhV4zAii0PpG/view" target="_blank" rel="noopener">Props plot (utilería por escena)</a><a class="src" href="https://drive.google.com/file/d/1oMGog7YYzOVdZCD4tOl3zLUDG3HhobkO/view" target="_blank" rel="noopener">Props inventory (inventario completo)</a><a class="src" href="https://drive.google.com/file/d/1YSWBBPSWqYtUu1TkyOjxa2qEIMKf5qd1/view" target="_blank" rel="noopener">OP Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1Ptvh4VZ2yGmWhfOSNxzlrBmoA2qilcvB/view" target="_blank" rel="noopener">PS Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1iX2jb2AGOpybMbPc0BYC0Gk5iI0w1X_N/view" target="_blank" rel="noopener">Running list &amp; armoury numbers</a><a class="src" href="https://drive.google.com/file/d/1-35PUW23rCT8Os_YiRrpSpcVNZEcyejx/view" target="_blank" rel="noopener">Stage Manager doc (running notes)</a><a class="src" href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener">Cue Caller Score (partitura de cues)</a><a class="src" href="https://drive.google.com/file/d/1UODXkqALjzWLrv1NwD1dgFnOucDLXtcm/view" target="_blank" rel="noopener">Costume Cardex (vestuario detallado)</a><a class="src" href="https://drive.google.com/file/d/1DZidW17gbp1p_OlDNyDzk1IZOqmnteBw/view" target="_blank" rel="noopener">Scene Character Breakdown</a><a class="src" href="https://drive.google.com/file/d/1sCs9QUmJBursxbbI3CaP2OlpaCU6STu9/view" target="_blank" rel="noopener">Sceneskema (grilla personajes/escena)</a><a class="src" href="https://drive.google.com/file/d/1gM74w5EwBD416L8dGF8Uq7RbVWIkgZty/view" target="_blank" rel="noopener">Cast list</a><a class="src" href="https://drive.google.com/file/d/1ZbbL-oKA_77u8X-6RLu2N2DdnTXKRkSM/view" target="_blank" rel="noopener">Reference list — zapatos</a><a class="src" href="https://drive.google.com/file/d/1QnOvO1sg6czMoAxT3A1wgkb3t15NfWVU/view" target="_blank" rel="noopener">Dressers lists (vestuaristas)</a><a class="src" href="https://drive.google.com/file/d/1Epo2jkXZXgb8AWFvpCgrJsFxzApIzKLX/view" target="_blank" rel="noopener">Consummables (consumibles por función)</a><a class="src" href="https://drive.google.com/file/d/1buQOvr4EFQz9Ba_avxVO5VD91pj6vORs/view" target="_blank" rel="noopener">Props photos (PDF)</a><a class="src" href="https://drive.google.com/drive/folders/1FN0bu9Ui4iGGhtYJrtejZX4Z1ZywMogl" target="_blank" rel="noopener">📁 Carpeta — Props Photographs</a><a class="src" href="https://drive.google.com/drive/folders/1KkDmRgdx8zhdzf8U8K8Wi9pyjmt-nesD" target="_blank" rel="noopener">📁 Carpeta — Alice costume photos</a><a class="src" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener">📁 Carpeta — Planos PDF (Buenos Aires)</a><a class="src" href="https://drive.google.com/drive/folders/1bDh1X51MLbxGGcD2j3EUeocG8I2Tijmw" target="_blank" rel="noopener">📁 Carpeta raíz de la producción</a></div>
   </div>
 </section>
 
