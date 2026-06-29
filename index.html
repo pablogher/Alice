@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alice's Adventures in Wonderland — Guía de escenas · Teatro Colón</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15110E; --panel:#1E1915; --panel2:#241E19; --line:#3A312A;
+  --ink:#EDE4D8; --muted:#9C8F80; --faint:#6E6256;
+  --red:#C53A30; --red-dim:#8E2C26; --brass:#C9A24B;
+  --op:#3E5C6B; --ps:#6B4A3E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.top{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#1b1511,#15110E);
+  position:relative;overflow:hidden}
+header.top::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 80% at 50% -20%, rgba(197,58,48,.18), transparent 60%);pointer-events:none}
+.top-inner{padding:46px 20px 38px;position:relative}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--brass);margin:0 0 14px}
+h1{font-family:Fraunces,serif;font-weight:900;font-size:clamp(2.1rem,5vw,3.6rem);
+  line-height:1.02;margin:0 0 6px;letter-spacing:-.01em}
+h1 .it{font-style:italic;font-weight:400;color:var(--red)}
+.sub1{color:var(--muted);max-width:60ch;margin:.4rem 0 0;font-size:1.02rem}
+.meta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.tag{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--muted)}
+
+/* legend */
+.legend{background:var(--panel);border-bottom:1px solid var(--line)}
+.legend .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;padding:14px 20px;font-size:.82rem;color:var(--muted)}
+.legend b{color:var(--ink);font-weight:600}
+.legend .warn{color:var(--brass)}
+
+/* layout */
+.main{display:grid;grid-template-columns:300px 1fr;gap:34px;padding:34px 0 80px}
+@media(max-width:880px){.main{grid-template-columns:1fr}}
+
+/* index */
+.index{position:sticky;top:14px;align-self:start;max-height:calc(100vh - 28px);overflow:auto;
+  border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px}
+.index h3{font-family:Fraunces,serif;font-size:1.05rem;margin:.2rem 4px 10px}
+.search{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:9px;
+  color:var(--ink);padding:9px 11px;font-family:inherit;font-size:.86rem;margin-bottom:12px}
+.search::placeholder{color:var(--faint)}
+.idx-group-title{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brass);margin:14px 4px 6px}
+ul.idx{list-style:none;margin:0;padding:0}
+.idx-item{border-bottom:1px solid #2a231d}
+.idx-head{width:100%;display:flex;align-items:center;gap:9px;background:none;border:0;cursor:pointer;
+  color:var(--ink);text-align:left;padding:9px 4px;font-family:inherit;font-size:.9rem}
+.idx-head:hover{color:var(--red)}
+.idx-no{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--muted);min-width:42px}
+.idx-title{flex:1}
+.idx-exp{color:var(--faint);transition:transform .2s}
+.idx-item.open .idx-exp{transform:rotate(90deg);color:var(--red)}
+.idx-chars{display:none;flex-wrap:wrap;gap:5px;padding:2px 4px 12px}
+.idx-item.open .idx-chars{display:flex}
+.idx-chars .chip{font-size:.66rem;padding:2px 7px}
+
+/* scenes */
+.scene{border:1px solid var(--line);border-radius:14px;background:var(--panel);margin-bottom:14px;overflow:hidden}
+.scene-head{width:100%;display:flex;align-items:center;gap:16px;background:none;border:0;cursor:pointer;
+  color:var(--ink);text-align:left;padding:16px 18px;font-family:inherit}
+.scene-head:hover{background:var(--panel2)}
+.scene-spine{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-width:46px;border-right:1px solid var(--line);padding-right:14px}
+.scene-act{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.1em;color:var(--brass)}
+.scene-no{font-family:Fraunces,serif;font-weight:900;font-size:1.5rem;line-height:1}
+.scene-titles{flex:1;display:flex;flex-direction:column}
+.scene-title{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;line-height:1.1}
+.scene-sub{color:var(--muted);font-size:.86rem;margin-top:2px}
+.scene-toggle{font-family:Fraunces,serif;font-size:1.6rem;color:var(--faint);line-height:1;transition:transform .2s}
+.scene.open .scene-toggle{transform:rotate(45deg);color:var(--red)}
+.scene-body{display:none;padding:4px 18px 22px;border-top:1px solid var(--line)}
+.scene.open .scene-body{display:block}
+.corr{font-size:.82rem;color:var(--muted);background:var(--panel2);border-left:3px solid var(--brass);
+  padding:8px 12px;border-radius:0 8px 8px 0;margin:16px 0}
+
+.block{margin:18px 0}
+.block h4{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.block h5{font-size:.82rem;color:var(--muted);margin:12px 0 6px;font-weight:600}
+.hint{color:var(--faint);font-weight:400;letter-spacing:0;text-transform:none}
+ul{margin:0;padding-left:18px}
+li{margin:4px 0;font-size:.92rem}
+.empty{color:var(--faint);font-style:italic;font-size:.86rem;margin:0}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.78rem;background:var(--panel2);border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;color:var(--ink)}
+
+.stage{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:12px;margin-top:6px}
+@media(max-width:720px){.stage{grid-template-columns:1fr}}
+.side{border:1px solid var(--line);border-radius:10px;padding:12px 12px 14px;background:var(--panel2)}
+.side .side-label{display:block;font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:8px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+.side.op{border-top:2px solid var(--op)} .side.op .side-label{color:#7FB3C9}
+.side.ps{border-top:2px solid var(--ps)} .side.ps .side-label{color:#C99B7F}
+.side.center{border-top:2px solid var(--red-dim)} .side.center .side-label{color:var(--red)}
+.side-ref{font-family:Inter,sans-serif;font-size:.78em;color:var(--faint);letter-spacing:0}
+.side ul{padding-left:16px} .side li{font-size:.85rem}
+.wings{margin-top:14px;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;background:#1a1511}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.notes ul li{color:#E7D6C2}
+.notes h4{color:var(--red)}
+
+.imggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.imgcard{display:flex;align-items:center;gap:9px;text-decoration:none;background:var(--panel2);
+  border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:.82rem;color:var(--ink)}
+.imgcard:hover{border-color:var(--red);color:var(--red)}
+.imgcard-ico{color:var(--brass)}
+
+.interval{text-align:center;margin:26px 0}
+.interval span{font-family:"JetBrains Mono",monospace;letter-spacing:.5em;font-size:.78rem;color:var(--brass);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:block}
+
+/* sources */
+.sources{border-top:1px solid var(--line);background:var(--panel);padding:30px 0}
+.sources h3{font-family:Fraunces,serif;font-size:1.2rem;margin:0 0 4px}
+.sources p{color:var(--muted);font-size:.86rem;margin:0 0 16px;max-width:70ch}
+.srcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.src{display:block;text-decoration:none;background:var(--panel2);border:1px solid var(--line);
+  border-radius:9px;padding:11px 13px;font-size:.86rem;color:var(--ink)}
+.src:hover{border-color:var(--brass);color:var(--brass)}
+
+footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:center}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner wrap">
+    <p class="eyebrow">Teatro Colón · Ballet Estable · Julio 2026</p>
+    <h1>Alice's Adventures<br><span class="it">in Wonderland</span></h1>
+    <p class="sub1">Guía de escenas para dirección de escena. Orden de funciones de Buenos Aires, cruzado con la Show Bible de la producción (props plot, sceneskema, cardex de vestuario, standbys y notas de SM).</p>
+    <div class="meta">
+      <span class="tag">Wheeldon / Talbot</span>
+      <span class="tag">30 escenas</span>
+      <span class="tag">Fuente: Drive de producción</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend">
+  <div class="wrap">
+    <span><b>Viamonte</b> = OP (Opposite Prompt)</span>
+    <span><b>Tucumán</b> = PS (Prompt Side)</span>
+    <span><b>DS</b> = Downstage (proscenio)</span>
+    <span><b>US</b> = Upstage (foro)</span>
+    <span><b>SL/SR</b> = Stage Left/Right (SR ≈ Viamonte · SL ≈ Tucumán)</span>
+    <span><b>Q/C</b> = cambio rápido</span>
+    <span class="warn">Lados nombrados según la geografía del Teatro Colón. Se conserva (OP)/(PS) como referencia a la Show Bible original.</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="main">
+
+    <aside class="index">
+      <h3>Índice de escenas</h3>
+      <input class="search" id="search" type="search" placeholder="Buscar escena o personaje…" autocomplete="off">
+      <div class="idx-group-title">Acto 1</div>
+      <ul class="idx"><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-1">
+        <span class="idx-no">A1·01</span>
+        <span class="idx-title">Prologue</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice (1 + 2)</span><span class="chip">Carroll / White Rabbit (como Carroll)</span><span class="chip">Jack (como Jack)</span><span class="chip">Mother</span><span class="chip">Father</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Edita</span><span class="chip">Lorina</span><span class="chip">Magician</span><span class="chip">Vicar</span><span class="chip">Verger</span><span class="chip">Raj</span><span class="chip">Butler</span><span class="chip">Indian Servant</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Maids (3)</span><span class="chip">Raj Wives (2)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-2">
+        <span class="idx-no">A1·02</span>
+        <span class="idx-title">Falling Alice</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-3">
+        <span class="idx-no">A1·03</span>
+        <span class="idx-title">Hallway Solo</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen (Queen 1)</span><span class="chip">Knave of Hearts</span><span class="chip">Guard (Indian Servant)</span><span class="chip">3 Guards (figuración)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-4">
+        <span class="idx-no">A1·04</span>
+        <span class="idx-title">Pool of Tears</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Caucus Animals (8): Turtle, Lory, Eaglet, Hamster, Cat, Mouse, Monkey, Owl, Beagle</span><span class="chip">Edita → Eaglet</span><span class="chip">Lorina → Lory</span><span class="chip">Tear boys (6)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-5">
+        <span class="idx-no">A1·05</span>
+        <span class="idx-title">Alice Solo</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice (3)</span><span class="chip">(según versión: Caucus Animals / Rooster — confirmar con dirección)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-6">
+        <span class="idx-no">A1·06</span>
+        <span class="idx-title">Paper Boat</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-7">
+        <span class="idx-no">A1·07</span>
+        <span class="idx-title">Fish and Frog</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Cook</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-8">
+        <span class="idx-no">A1·08</span>
+        <span class="idx-title">Pig and Pepper</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Cook</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Queen 1 (al cierre, &#x27;The Knave&#x27;)</span><span class="chip">King of Hearts</span><span class="chip">Executioner</span><span class="chip">Guard</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-9">
+        <span class="idx-no">A1·09</span>
+        <span class="idx-title">Cheshire Cat</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (cabeza)</span><span class="chip">Cheshire Cat (7 piezas)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-10">
+        <span class="idx-no">A1·10</span>
+        <span class="idx-title">White Rabbit and Alice (Tik Tok)</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-11">
+        <span class="idx-no">A1·11</span>
+        <span class="idx-title">Tea Party</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Mad Hatter (Magician)</span><span class="chip">March Hare (Vicar)</span><span class="chip">Dormouse (Verger)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-12">
+        <span class="idx-no">A1·12</span>
+        <span class="idx-title">2nd Cheshire Cat</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (4 piezas)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-13">
+        <span class="idx-no">A1·13</span>
+        <span class="idx-title">Caterpillar</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Raj → Caterpillar</span><span class="chip">Caterpillar Women (4)</span><span class="chip">Caterpillar Tail (8)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-14">
+        <span class="idx-no">A1·14</span>
+        <span class="idx-title">Alice — back in the Hallway</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-1-15">
+        <span class="idx-no">A1·15</span>
+        <span class="idx-title">Flowers</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Flower Soloist Women (4)</span><span class="chip">Flower Women (6)</span><span class="chip">Flower Soloist Men (4)</span><span class="chip">Flower Man (6)</span><span class="chip">Knave of Hearts</span><span class="chip">Guards (2)</span></div>
+    </li></ul>
+      <div class="idx-group-title">Acto 2</div>
+      <ul class="idx"><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-1">
+        <span class="idx-no">A2·01</span>
+        <span class="idx-title">Gardeners</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><span class="chip">Hedgehogs (4, niños)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">3 Guards</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-2">
+        <span class="idx-no">A2·02</span>
+        <span class="idx-title">Queen&#x27;s Entrance</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">King of Hearts</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><span class="chip">Alice</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-3">
+        <span class="idx-no">A2·03</span>
+        <span class="idx-title">Tart Adagio</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Tart Suitors (4)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-4">
+        <span class="idx-no">A2·04</span>
+        <span class="idx-title">Croquet Match</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">White Rabbit</span><span class="chip">Flamingo (5)</span><span class="chip">Alice</span><span class="chip">Hedges (6)</span><span class="chip">Hedgehogs</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-5">
+        <span class="idx-no">A2·05</span>
+        <span class="idx-title">Jack is Arrested</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Knave of Hearts</span><span class="chip">Guards</span><span class="chip">Executioner</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-6">
+        <span class="idx-no">A2·06</span>
+        <span class="idx-title">Cards</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">PT Card Women (6)</span><span class="chip">PT Card Men (6)</span><span class="chip">Card Women 7+8</span><span class="chip">Card Men 7+8</span><span class="chip">Alice</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-7">
+        <span class="idx-no">A2·07</span>
+        <span class="idx-title">White Rabbit Solo</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">Card Women/Men</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-8">
+        <span class="idx-no">A2·08</span>
+        <span class="idx-title">Entrance of the Court</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Court Women (6)</span><span class="chip">Court Men (6)</span><span class="chip">King of Hearts</span><span class="chip">Queen</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">White Rabbit</span><span class="chip">Knave</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-9">
+        <span class="idx-no">A2·09</span>
+        <span class="idx-title">Queen&#x27;s Tango Solo</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Court Women/Men</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-10">
+        <span class="idx-no">A2·10</span>
+        <span class="idx-title">Trial</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-11">
+        <span class="idx-no">A2·11</span>
+        <span class="idx-title">Jack Solo</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><span class="chip">Queen</span><span class="chip">King</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-12">
+        <span class="idx-no">A2·12</span>
+        <span class="idx-title">Alice — It Was Me</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Court</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-13">
+        <span class="idx-no">A2·13</span>
+        <span class="idx-title">Trial Pas de Deux</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-14">
+        <span class="idx-no">A2·14</span>
+        <span class="idx-title">Chase</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span><span class="chip">Hedgehogs (1)</span><span class="chip">Gardeners (3)</span><span class="chip">3 Guards</span></div>
+    </li><li class="idx-item">
+      <button class="idx-head" data-target="scene-2-15">
+        <span class="idx-no">A2·15</span>
+        <span class="idx-title">Epilogue</span>
+        <span class="idx-exp">▸</span>
+      </button>
+      <div class="idx-chars"><span class="chip">Alice (modern)</span><span class="chip">Carroll (modern)</span><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
+    </li></ul>
+    </aside>
+
+    <div class="scenes">
+      
+<section class="scene" id="scene-1-1" data-search="prologue the deanery (en el pasado) alice (1 + 2) carroll / white rabbit (como carroll) jack (como jack) mother father duchess cook edita lorina magician vicar verger raj butler indian servant footman/fish footman/frog maids (3) raj wives (2)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">01</span></span>
+    <span class="scene-titles"><span class="scene-title">Prologue</span><span class="scene-sub">The Deanery (en el pasado)</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 1 · Marcas blancas · Proyección F.O.H.</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice (1 + 2)</span><span class="chip">Carroll / White Rabbit (como Carroll)</span><span class="chip">Jack (como Jack)</span><span class="chip">Mother</span><span class="chip">Father</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Edita</span><span class="chip">Lorina</span><span class="chip">Magician</span><span class="chip">Vicar</span><span class="chip">Verger</span><span class="chip">Raj</span><span class="chip">Butler</span><span class="chip">Indian Servant</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Maids (3)</span><span class="chip">Raj Wives (2)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Parasol dorado</li><li>Manta / almohadón (servant)</li><li>Bolso-cámara que crece (footman – Lewis)</li><li>Cochecito con bebé (Duchess)</li><li>Biblia (Verger)</li><li>Corazones de papel (running prop, en saco de Lewis)</li><li>Conejo blanco desde la galera</li><li>Mano de cartas (Lewis)</li><li>Pulgar trucado y pañuelo</li><li>Lata de algodón flash</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Mesa larga con orificio circular + 10 sillas</li><li>Sobre la mesa: mantel en diagonal, cubiertos, tetera, jarra de leche, azucarera con terrones, servilletas, 6 tazas con plato, 10 platos</li><li>Debajo de la mesa: caja con 4 tazas</li><li>Plataforma de marioneta (con la marioneta de Alice arriba)</li><li>Banco (bench)</li><li>En el piso: cámara trucada sobre trípode con funda de seda, flash de mano en gancho, anteojos del Conejo atados bajo la seda, abanico estampado en el brazo del banco, bolso de Lewis Carroll con anotador, 1 libro de Alice</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Bandeja pesada de tartaletas (1 real arriba)</li><li>1 Victoria sponge</li><li>Soporte de cupcakes</li><li>Sándwiches en soporte de niveles + 2 con velcro (Maids)</li><li>Gelatina temblorosa (Cook)</li><li>Pila de 6 tazas y platos + 2 repasadores + tetera (footmen)</li><li>Trug con: 11 rosas blancas, 1 rosa roja larga + cuchillo (Jack), 1 rosa roja corta</li><li>Valija (Jack)</li><li>3 libros atados + 1 libro suelto (Father)</li><li>Florero de vidrio</li></ul></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>US Tucumán — biombos: cambio rápido de Alice</li><li>Biombos: cambio rápido de las hermanas</li><li>DOOR (puerta)</li><li>Tucumán 1 — 3 mazos de croquet, 1 pelota, 2 aros</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de hada lila (corpiño de satén lila, mangas de organza, pollera de tul con lentejuelas, alas, vincha, medias rosas, puntas rosas)</li><li>Mother — vestido victoriano verde claro, gargantilla, sombrero de paja de ala ancha (se quita en escena), delantal de organza</li><li>Cook — blusa negra de cuello blanco festoneado, delantal blanco, cofia, botas con cordones</li><li>Maids — blusa de algodón blanca, pollera de lana negra, delantal y cofia blancos</li><li>Raj Wives — top de brocato crema, sari de gasa con borde dorado, tiara</li><li>Carroll/Rabbit — camisa de cuello de alas, frac, chaleco a cuadros (zapatos: jazz negros / Adidas)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Telón baja — se señaliza el inicio de función</li><li>Plataforma de marioneta preseteada (Alice puppet +3.5M guardada en wing Tucumán durante el preset del Deanery)</li><li>Proyección F.O.H. usada para el Deanery (proyectores Casio)</li><li>9 min: trolley empujado fuerte hacia SR, 2º hombro</li><li>11 min: fuego en flash de cámara; la cámara deja de girar en el blackout</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Antes de empezar: informar a técnicos quién es Queen y Rabbit hoy (trampa de piso y vestido rojo se ajustan). Verificar que las ruedas de la mesa larga estén trabadas.</li><li>Inicio: banco + Alice + 2 hermanas en el piso, cámara y Conejo blanco.</li><li>Pre-show: revisar orden y limpieza del escenario (sin cables) en SL y SR; piso de danza y monitores; resina y agua en SL+SR; luces de balizamiento.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rNOIl1ciTvaaR00ooD41h15yxkEmgOeH/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Parasol (Deanery)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1pW7mzIGwiFElU4_bzg1rzlHpu--TNaap/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1qyHQRL9IOOhLn2E3O3bv1xJ-9MQtrfjq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Banco del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1QLvI6L9Rj5D6TuypMjk2AQuaa6wHLHKm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1e5Dj5cm84vX4MmzqwQX-eoHTOB5JYhxD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta pequeña de Alice</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Dvib4NXtjAi_Mm9ljyH2UcbsznFks2xI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Pram (cochecito)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1o6tWtu0C5h33cPPF6-frMC22RUY3ImhO/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Pram 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1f54EkCM0KibkTa8gLSbBLhpRkiG_KS1B/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cajas / cases</span></a><a class="imgcard" href="https://drive.google.com/file/d/1jCg4rUgCcFNDoaa19lejJfAiU0v1_8aq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Acto 1)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-2" data-search="falling alice down the rabbit hole (video) falling alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">02</span></span>
+    <span class="scene-titles"><span class="scene-title">Falling Alice</span><span class="scene-sub">Down the Rabbit Hole (video)</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 2 · Marcas naranjas</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>2 alabardas (Guards) — Armería</li><li>Abanico azul (SM)</li><li>Bandeja liviana de tartaletas con correa (Knave)</li><li>Tartaleta gigante (Knave)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Marioneta de Alice (bar 18) operada por 4 bailarines parados en la plataforma</li><li>Botella &#x27;Drink me&#x27; con cinta rosa (bar 17)</li><li>Pastel real &#x27;Eat me&#x27; sobre brazo extensible</li><li>DOME (cúpula) con pétalos</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>MS Tucumán — cambio rápido de Queen</li><li>Tucumán 2 — armario de Queen of Hearts con caja (verificar casting)</li><li>Puerta remota alineada con el hall</li></ul></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>Biombo elástico volado (flown stretchy screen)</li><li>Small room (cuarto chico)</li><li>Cambio en la puerta: arriba Rabbit Q/C / abajo Alice Q/C</li><li>31 — negro total</li><li>DS Tucumán — Jack Q/C</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Falling Alice — remera negra de manga larga, chaqueta kung-fu negra, pantalón negro, capucha, guantes negros, medias negras sobre las zapatillas</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cambio a Falling Alice — ¡ATENCIÓN seguridad! Vigilar especialmente el telón del medio</li><li>Botella &#x27;Drink me&#x27; vuela (bar 17)</li><li>Marioneta de Alice operada desde la plataforma (bar 18)</li><li>Brazo extensible saca el pastel &#x27;Eat me&#x27;</li><li>DOME suelta pétalos</li><li>Biombo elástico volado</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>13 min: cambio a Falling Alice — ATENCIÓN seguridad, mirar el telón del medio.</li><li>15 min: luces para Alice cuando se acuesta en el piso (cruz).</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1FzaoP89lS9I3GAI_5lIZOs5EMUQlYkhx/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/11aYZYSyIzrsLBklY5y5f-GwvVSLfx0a0/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Btw-9dxGKh4tAhnKdIzZd1hru0O4bw3Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Brazo extensible &#x27;Eat Me&#x27; 03</span></a><a class="imgcard" href="https://drive.google.com/file/d/1a8Wfaf3FLAoSMUuswo6h_JNvnJH-S25f/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tiny Alice</span></a><a class="imgcard" href="https://drive.google.com/file/d/1HLFTSi24otOMOHBhWepi7ynPz7SKsl5L/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tiny Alice 2</span></a><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-3" data-search="hallway solo alice + hallway chase alice white rabbit queen (queen 1) knave of hearts guard (indian servant) 3 guards (figuración)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">03</span></span>
+    <span class="scene-titles"><span class="scene-title">Hallway Solo</span><span class="scene-sub">Alice + Hallway Chase</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 3 (The Hallway)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen (Queen 1)</span><span class="chip">Knave of Hearts</span><span class="chip">Guard (Indian Servant)</span><span class="chip">3 Guards (figuración)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>(comparte mesa con esc. 2) 2 alabardas, abanico azul, bandeja de tartaletas (Knave), tartaleta gigante</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Puerta remota alineada con el hall</li><li>Hall gauze (gasa del hall)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Tucumán 2 — armario de Queen of Hearts</li><li>Puerta remota</li><li>DS Tucumán — Jack Q/C</li></ul></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>31 — negro total</li><li>Cambio en la puerta (Rabbit arriba / Alice abajo)</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido lila de tafetán (cambio de 1 min 41 s desde el vestido de hada)</li><li>White Rabbit — frac, galera negra</li><li>Knave — tops rojo/blanco elásticos, medias rojas</li><li>Queen — (Mother aún) transición hacia Queen of Hearts</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Operación de la puerta remota</li><li>Hall gauze (gasa) en posición</li><li>Biombo elástico volado</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>17 min: si la puertita no opera, asegurar que la chica de negro salga a escena (parada en wing nº 2 SR).</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a><a class="imgcard" href="https://drive.google.com/file/d/14IZbZnxCHq8xOW4uc6EOd72dQeW18_AS/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (2)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-4" data-search="pool of tears el charco de lágrimas alice caucus animals (8): turtle, lory, eaglet, hamster, cat, mouse, monkey, owl, beagle edita → eaglet lorina → lory tear boys (6)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">04</span></span>
+    <span class="scene-titles"><span class="scene-title">Pool of Tears</span><span class="scene-sub">El charco de lágrimas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 4</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Caucus Animals (8): Turtle, Lory, Eaglet, Hamster, Cat, Mouse, Monkey, Owl, Beagle</span><span class="chip">Edita → Eaglet</span><span class="chip">Lorina → Lory</span><span class="chip">Tear boys (6)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Botella sobre vara (Owl)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Tela de olas (las olas suben)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Bote sobre vara (Beagle)</li></ul></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>US Viamonte — Rabbit Q/C</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile (dance dress)</li><li>Eaglet/Lory — personajes-animales (puntas pintadas: Lory verde a cuadros, Eaglet gris)</li><li>Turtle — puntas amarillo mostaza; Beagle — pardo rojizo; Owl — zapatillas negras</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Sistema de olas (tela)</li><li>Bote sobre vara (Tucumán)</li><li>Botella sobre vara (Viamonte)</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>25 min: ningún bailarín puede pararse sobre la tela cuando suben las olas.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/19jVW_6XvP48hCa7vxcLLEqjAE7tbHME6/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote / botella para olas</span></a><a class="imgcard" href="https://drive.google.com/file/d/1glHf3LEN9oLKUcws9Y5zbdTnE0yrzpQI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición del bote DS Tucumán</span></a><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-5" data-search="alice solo solo de alice alice (3) (según versión: caucus animals / rooster — confirmar con dirección)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">05</span></span>
+    <span class="scene-titles"><span class="scene-title">Alice Solo</span><span class="scene-sub">Solo de Alice</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Corresponde al área de la Caucus Race del Royal Ballet (Acto 1, Esc. 5). El orden del Colón lo titula &#x27;Alice Solo&#x27;; verificar contenido coreográfico.</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice (3)</span><span class="chip">(según versión: Caucus Animals / Rooster — confirmar con dirección)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>(Caucus Race) revólver de fogueo .38 entregado al Rooster, si la versión lo conserva</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Cronómetro volado (las agujas giran en sentido antihorario)</li><li>1 bandera de largada (Cat) — seteada en bay 2</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cronómetro volado (flown stopwatch)</li><li>Bandera de largada</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>⚠ Esta escena difiere entre versiones. En el material de origen la &#x27;Caucus Race&#x27; incluye disparo de pistola (Rooster + Alice). Confirmar si el Colón conserva el disparo y la coreografía de carrera.</li></ul></div>
+    
+  </div>
+</section>
+<section class="scene" id="scene-1-6" data-search="paper boat el bote de papel (proyección de libélula) alice white rabbit">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">06</span></span>
+    <span class="scene-titles"><span class="scene-title">Paper Boat</span><span class="scene-sub">El bote de papel (proyección de libélula)</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 6</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Bote trucado con soga blanca</li><li>Cuadro &#x27;Home Sweet Home&#x27; con gancho (puerta central + 2 ventanas)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Bote trucado entra rodando</li><li>Proyección de libélula (Dragonfly)</li><li>Cuadro &#x27;Home Sweet Home&#x27; baja con gancho</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>31 min: ningún bailarín en escena cuando se cambia a &#x27;Home Sweet Home&#x27;.</li><li>38 min: cuidar que los bailarines no sean golpeados cuando &#x27;Home Sweet Home&#x27; vuelve a bajar.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/175fNhoLNtyMJTCQXWNrxWAJNZkWtCosa/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Bote y botella grande</span></a><a class="imgcard" href="https://drive.google.com/file/d/1glHf3LEN9oLKUcws9Y5zbdTnE0yrzpQI/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición del bote DS Tucumán</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-7" data-search="fish and frog pez y rana footman/fish footman/frog duchess alice cook">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">07</span></span>
+    <span class="scene-titles"><span class="scene-title">Fish and Frog</span><span class="scene-sub">Pez y Rana</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 7</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Cook</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Bebé (Duchess)</li><li>Silla rosa de cerdo (pig chair)</li><li>En el carro: 5 ollas grandes fijas con cerdos, picadora con cerdo de patas móviles (línea desenrollada), cucharón, pimenteros, 2 cuchillas de carne (1 goma, 1 metal)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Kitchen truck (carro de cocina) en posición</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Invitación en cartón (Fish)</li><li>Pig Baby (seteado como cerdo) — Props se lo da a Alice</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Fish — librea, zapatillas grises pintadas</li><li>Frog — librea, zapatillas verdes pintadas</li><li>Duchess — corsé acolchado, crinolina, guantes largos</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Kitchen truck en posición (carpinteros)</li><li>Picadora con cerdo de patas móviles</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1jCg4rUgCcFNDoaa19lejJfAiU0v1_8aq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Acto 1)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-8" data-search="pig and pepper cerdo y pimienta · marcas rojas cook duchess alice footman/fish footman/frog queen 1 (al cierre, &#x27;the knave&#x27;) king of hearts executioner guard">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">08</span></span>
+    <span class="scene-titles"><span class="scene-title">Pig and Pepper</span><span class="scene-sub">Cerdo y Pimienta · Marcas rojas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 8</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Cook</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Queen 1 (al cierre, &#x27;The Knave&#x27;)</span><span class="chip">King of Hearts</span><span class="chip">Executioner</span><span class="chip">Guard</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Bebé (Duchess)</li><li>Silla de cerdo (se retira a Viamonte en el cambio)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Kitchen truck con cerdos en ollas, cucharón, pimenteros, cuchillas (cook)</li><li>Cuadro &#x27;Home Sweet Home&#x27;</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Pig Baby pasado a Alice; luego recibido por Props</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Cook — delantal manchado de rosa, camisa de lino envejecida</li><li>Duchess — delantal ensangrentado (bloodied apron)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Kitchen truck operado por carpinteros</li><li>Cambio de escena: se retira silla y bebé a Viamonte</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>30 min: disparo (gunshot).</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1mHalroUMcOL680x4RWCzrVIBOtL3rg8g/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán</span></a><a class="imgcard" href="https://drive.google.com/file/d/1nDUyAhkDLFrNTTKfe5Z6_QjAApM67x05/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Tucumán (2)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-9" data-search="cheshire cat el gato de cheshire (marionetas) alice cheshire cat (cabeza) cheshire cat (7 piezas)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">09</span></span>
+    <span class="scene-titles"><span class="scene-title">Cheshire Cat</span><span class="scene-sub">El Gato de Cheshire (marionetas)</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 9 + Mad Hatter&#x27;s cloth #1</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Cheshire Cat (cabeza)</span><span class="chip">Cheshire Cat (7 piezas)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Reloj despertador + bolsa de agua caliente (Dormouse)</li><li>Tetera (March Hare)</li><li>Asiento cupcake que abre (adentro: jarra, 2 tazas y platos)</li><li>Asiento cupcake</li><li>Victoria sponge (+ cama elástica)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Tetera grande con espuma adentro (tapa apoyada contra la tetera — Dormouse)</li><li>Silla roja alta con gemelos de ópera en el estante</li><li>Asiento de cubo de azúcar (Alice)</li><li>Mad Hatter&#x27;s cloth (telón)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>DS Viamonte wing 1 — cola, cabeza y 2 patas delanteras del Gato de Cheshire</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras (Costume Dept.)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Mad Hatter&#x27;s cloth en posición</li><li>Piezas del Gato armadas desde DS Viamonte</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/16Z_UJ8tJVf52tyjVumVzkUEhq0Yz6N22/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cara del Gato (Cat Face)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rvnxY8MFlO-a2h74wCG3S9eqV6fqKxVM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta del Gato</span></a><a class="imgcard" href="https://drive.google.com/file/d/1R743URs20d0b2pjhFGISfL53pqN5URoE/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Caras del Gato en soporte</span></a><a class="imgcard" href="https://drive.google.com/file/d/1XzSNvFa0dZZlkoo6fcYY42A2itiLYA0a/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Piezas del Gato (Tucumán, Acto 1)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-10" data-search="white rabbit and alice (tik tok) conejo blanco y alice alice white rabbit">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">10</span></span>
+    <span class="scene-titles"><span class="scene-title">White Rabbit and Alice (Tik Tok)</span><span class="scene-sub">Conejo blanco y Alice</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Transición hacia la Tea Party (Royal Ballet Esc. 10). El Colón la titula &#x27;Tik Tok&#x27; (reloj).</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>(elementos de transición hacia la Mad Hatter&#x27;s Party)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Preparación del Theatre truck (Mad Hatter) detrás del telón del medio</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>⚠ Momento &#x27;Tik Tok&#x27; (reloj). Confirmar contenido exacto con la dirección coreográfica del Colón.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1JvQDzYzJRHrd_v0_9Qe_jTcJOOy56TXr/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tetera</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-11" data-search="tea party mad hatter&#x27;s party · marcas violetas alice mad hatter (magician) march hare (vicar) dormouse (verger)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">11</span></span>
+    <span class="scene-titles"><span class="scene-title">Tea Party</span><span class="scene-sub">Mad Hatter&#x27;s Party · Marcas violetas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 10 (Theatre truck)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Mad Hatter (Magician)</span><span class="chip">March Hare (Vicar)</span><span class="chip">Dormouse (Verger)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Reloj despertador + bolsa de agua caliente (Dormouse)</li><li>Tetera (March Hare)</li><li>Asientos cupcake</li><li>Victoria sponge</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Theatre truck (teatrillo del Sombrerero)</li><li>Mesa larga con vajilla del té (tazas, platos, cubiertos)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Mad Hatter — galera, frac de retazos (zapatos de tap negros)</li><li>March Hare — orejas y cola de liebre, blazer a rayas amarillas</li><li>Dormouse — chaleco rosa y dorado, cola de ratón larga, pompones rojos</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Theatre truck (Mad Hatter) entra — operado por carpinteros</li><li>Mad Hatter&#x27;s cloth #2</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>7 min (Acto 2 del esquema danés): ATENCIÓN seguridad en el cambio del Mad Hatter.</li><li>26 min: después del vals de las flores, llamar maquilladores: &#x27;todos los maquilladores disponibles a bambalinas&#x27;.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1baWHIccM-K0GAzEoDRd2AdJLeZ7fSMQR/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mad Hatter&#x27;s (sombrerero)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1etfafnSX5BHEcCXtsuZdC33cqWSU5DBA/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mad Hatter&#x27;s Theatre (truck)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1_aZQNdQyWzerIrd-6x5AqLRGHtm86vtM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cupcake (asiento)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1WEHDQOa5nfAcgri-DAjXmwW15w1OJoe_/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Cupcakes y Victoria Sponge</span></a><a class="imgcard" href="https://drive.google.com/file/d/1Kudkd2UcLJwS7SY34b2FE_KK1I3ELSc_/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla roja de ópera y cubo de azúcar</span></a><a class="imgcard" href="https://drive.google.com/file/d/1JvQDzYzJRHrd_v0_9Qe_jTcJOOy56TXr/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Tetera</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-12" data-search="2nd cheshire cat segundo gato de cheshire alice cheshire cat (4 piezas)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">12</span></span>
+    <span class="scene-titles"><span class="scene-title">2nd Cheshire Cat</span><span class="scene-sub">Segundo Gato de Cheshire</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Reaparición del Gato (Sceneskema: &#x27;Chesire Cat 4 parts&#x27; en &#x27;Alice alone&#x27;). Royal Ballet Esc. 11.</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Cheshire Cat (4 piezas)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Negro total — Alice sola</li><li>Gasa azul — bleedthru y vuelo</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>Piezas del Gato (4) desde wing</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Negro total (full black)</li><li>Gasa azul: bleedthru y vuelo</li><li>Mad Hatter&#x27;s cloth</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rvnxY8MFlO-a2h74wCG3S9eqV6fqKxVM/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Marioneta del Gato</span></a><a class="imgcard" href="https://drive.google.com/file/d/1R743URs20d0b2pjhFGISfL53pqN5URoE/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Caras del Gato en soporte</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-13" data-search="caterpillar la oruga · marcas rayadas alice raj → caterpillar caterpillar women (4) caterpillar tail (8)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">13</span></span>
+    <span class="scene-titles"><span class="scene-title">Caterpillar</span><span class="scene-sub">La Oruga · Marcas rayadas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 12</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Raj → Caterpillar</span><span class="chip">Caterpillar Women (4)</span><span class="chip">Caterpillar Tail (8)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Parasol azul (Caterpillar)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Mushroom truck (carro hongo) con hookah fijo arriba y malvavisco azul bajo un pétalo</li><li>Negro total — Alice sola</li><li>Gasa azul — bleedthru y vuelo</li><li>Peasouper (niebla) ×2</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>DS Viamonte — cola azul estilo chino (8 chicas)</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Caterpillar/Raj — zapatillas color piel + zapatos dorados enrollados</li><li>Caterpillar Tail — puntas azul/violeta pintadas</li><li>Edita vestida de personaje chino (saco de brocato rosa, sombrero chino)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Mushroom truck en posición (carpinteros)</li><li>Negro total + gasa azul</li><li>Peasouper (máquina de niebla) ×2</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>15 min: ayudar a Jonathan/Andreas/Ryan a montar la oruga (sostener las correas).</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1TJQO6oC7VVMAaasQMlzspieJs-IvUVdc/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Hongo del Caterpillar</span></a><a class="imgcard" href="https://drive.google.com/file/d/11SSD0Vn2KRzPgZAcSn7hLYvACORf0hNs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Parasol del Caterpillar</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-14" data-search="alice — back in the hallway hall of doors alice">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">14</span></span>
+    <span class="scene-titles"><span class="scene-title">Alice — back in the Hallway</span><span class="scene-sub">Hall of Doors</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 13 (Hall of doors)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Negro total</li><li>Hall gauze (gasa del hall)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Negro total</li><li>Hall gauze en posición</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1x0VtWZWW4JFzcv-wmGgzOXuAOw95CMt8/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Puerta remota (Small Door)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-1-15" data-search="flowers the flower garden alice flower soloist women (4) flower women (6) flower soloist men (4) flower man (6) knave of hearts guards (2)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">15</span></span>
+    <span class="scene-titles"><span class="scene-title">Flowers</span><span class="scene-sub">The Flower Garden</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 14</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Flower Soloist Women (4)</span><span class="chip">Flower Women (6)</span><span class="chip">Flower Soloist Men (4)</span><span class="chip">Flower Man (6)</span><span class="chip">Knave of Hearts</span><span class="chip">Guards (2)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Bandeja liviana de tartaletas (Knave)</li><li>2 alabardas (Guards)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Jardín de flores (vals de las flores)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>2 alabardas (Guards)</li><li>Armario chico de corazón de la Reina (se resetea tras esc. 2)</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Flower Women/Men — vinchas florales (la de Alice pasa a la versión flor en Acto 2)</li><li>Flower Men — zapatillas pintadas (verde, violeta, amarillo, naranja)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Cierre del Acto 1 — el hacha cae (intervalo)</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>28 min (esquema danés): al final del acto, los guardias salen por SR con lanzas grandes — debe haber paso libre.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a></div></div>
+  </div>
+</section><div class="interval"><span>I N T E R V A L O</span></div>
+<section class="scene" id="scene-2-1" data-search="gardeners the queen of hearts garden (maze) · marcas verdes gardeners (3) hedges (6, niños) hedgehogs (4, niños) alice white rabbit knave duchess cook executioner 3 guards">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">01</span></span>
+    <span class="scene-titles"><span class="scene-title">Gardeners</span><span class="scene-sub">The Queen of Hearts Garden (Maze) · Marcas verdes</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (apertura)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><span class="chip">Hedgehogs (4, niños)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">3 Guards</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Viamonte wing 4 — 8 marionetas de cara de gato sobre varas</li><li>2 flamencos</li><li>1 hedgehog football</li><li>Cuerno de carnero (White Rabbit)</li><li>Esposas de soga (Guard)</li><li>Bandeja pesada de tartaletas con 3 velcro (Adage men)</li><li>4 alabardas (Guards) — reset del Acto 1</li><li>Hacha de utilería (Executioner)</li><li>Viamonte 1 — banco rojo</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Cartas que caen — flat preseteado</li><li>2 colchones negros preseteados horizontalmente</li><li>3 arbustos de rosas (el central es remoto; los otros dos manuales) + 3 cepillos en las bases</li><li>6 setos cónicos sobre ruedas (estudiantes adentro)</li><li>5 setos esféricos</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>2 flamencos</li><li>3 hedgehog footballs</li><li>2 pilas de plumas rosas</li><li>Cetro de corazón (Queen)</li><li>Hacha de metal (Executioner) — Armería</li><li>Cuchilla de goma (Cook)</li><li>Invitación (Duchess)</li><li>DSPS1 — armario GIGANTE de Queen of Hearts</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — corpiño de corazón rojo, tutú rojo, corona, puntas rojas</li><li>Gardeners — botas especiales verde/rojo</li><li>Flamingo Ladies — puntas rosas</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Setos cónicos sobre ruedas entran (estudiantes adentro)</li><li>Arbusto de rosas central por control remoto</li><li>Armario gigante de la Reina entra desde DSPS1</li><li>Banco rojo en Viamonte 1</li><li>Reset de alabardas del Acto 1</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Antes del Acto 3 (danés): los niños colocan sus setos — 3 de cada lado.</li><li>16 min: luces para la salida de los setos por SR atrás — o standby pértiga 23 SL. ¡Seguridad!</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a><a class="imgcard" href="https://drive.google.com/file/d/1HaGVQprSW2OhOeWk-XOZoAD-bvuKEIcs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Arbustos de rosas</span></a><a class="imgcard" href="https://drive.google.com/file/d/1uy28-Zt6EZRVANr5swV1em2hfdFIrGYk/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Setos cónicos (cone hedges)</span></a><a class="imgcard" href="https://drive.google.com/file/d/1zof8ebooaKEbkzaInsOnYSRBPYAN6_9i/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Armario grande de la Reina</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-2" data-search="queen&#x27;s entrance entrada de la reina queen (big box) king of hearts white rabbit knave duchess cook executioner gardeners (3) hedges (6) alice">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">02</span></span>
+    <span class="scene-titles"><span class="scene-title">Queen&#x27;s Entrance</span><span class="scene-sub">Entrada de la Reina</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Queen (Big Box)</span><span class="chip">King of Hearts</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><span class="chip">Alice</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Cetro (King)</li><li>Reset desde Acto 1: bolsa de agua caliente y despertador (Dormouse)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Armario GIGANTE de Queen of Hearts (Big Box) en posición</li><li>Trono(s) rojo(s) sobre podio</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Cetro de corazón (Queen)</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — sale del &#x27;Big Box&#x27; (vestido-prop de madera roja)</li><li>King of Hearts — botas jazz negras, zapatos rococó rojos</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Armario gigante / Big Box: la Reina emerge</li><li>Podium truck con tronos en posición (carpinteros)</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>2:1 (running): se entregan 2 alabardas a los guardias en Tucumán una vez que la Reina &#x27;grande&#x27; entró.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1J-3HGDAYWWQ-usBefBOqRK3pSC4Z6ozP/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/1vpxVz_WJZMSBPgKudrPCsN5K1ipZwLMm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 02</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rx62T-Rb4coRwqY-3zOCAE9vVAEYAz2Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 03</span></a><a class="imgcard" href="https://drive.google.com/file/d/1zof8ebooaKEbkzaInsOnYSRBPYAN6_9i/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Armario grande de la Reina</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-3" data-search="tart adagio adagio de las tartaletas tart suitors (4) alice white rabbit queen">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">03</span></span>
+    <span class="scene-titles"><span class="scene-title">Tart Adagio</span><span class="scene-sub">Adagio de las tartaletas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (Tart Adagio)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Tart Suitors (4)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Bandeja de tartaletas (Adage men)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Bandeja pesada de tartaletas con 3 tartaletas con velcro (Adage men)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Tart Suitors / Court Men — zapatillas rojas o negras pintadas (con velcro cosido)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1slptRWsLy7Dwhj6NghGn4HUOndm16NzQ/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Mesa de utilería Viamonte (Actos 1 y 2)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-4" data-search="croquet match partido de croquet queen (big box) white rabbit flamingo (5) alice hedges (6) hedgehogs">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">04</span></span>
+    <span class="scene-titles"><span class="scene-title">Croquet Match</span><span class="scene-sub">Partido de croquet</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (Croquet Match)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Queen (Big Box)</span><span class="chip">White Rabbit</span><span class="chip">Flamingo (5)</span><span class="chip">Alice</span><span class="chip">Hedges (6)</span><span class="chip">Hedgehogs</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Flamencos</li><li>Hedgehog footballs</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>5 setos esféricos</li><li>Setos cónicos</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Flamencos</li><li>Hedgehog footballs</li><li>Plumas rosas</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Flamingo Ladies — puntas rosas</li><li>Hedgehogs (niños) — zapatillas marrones pintadas</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Setos en posición de juego</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>17 min: NO debe haber bailarines en el escenario cuando la maquinaria hace el gran cambio al escenario corto (torres de castillo de cartas). Retirar restos de setos y plumas de flamenco. ¡Seguridad pértiga 23 SL!</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1zXrglkEYkPSoucvL1naIMhaHKx9o32Xs/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Utilería del Jardín de la Reina</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-5" data-search="jack is arrested el arresto de jack knave of hearts guards executioner queen king alice white rabbit">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">05</span></span>
+    <span class="scene-titles"><span class="scene-title">Jack is Arrested</span><span class="scene-sub">El arresto de Jack</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (cierre) / hacia el Court</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Knave of Hearts</span><span class="chip">Guards</span><span class="chip">Executioner</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Esposas de soga (Guard)</li><li>Hacha de utilería (Executioner)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Banco rojo en proscenio</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Hacha de metal (Executioner) — Armería</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Knave — rojo</li><li>Executioner — casco negro</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Gauze frontal #1 (bar 27)</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Transición Court: 2:1 hacia 2:2 — las alabardas se manejan Viamonte↔Tucumán; recoger al salir con el prisionero.</li></ul></div>
+    
+  </div>
+</section>
+<section class="scene" id="scene-2-6" data-search="cards setting up the courtroom · marcas rojas pt card women (6) pt card men (6) card women 7+8 card men 7+8 alice">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">06</span></span>
+    <span class="scene-titles"><span class="scene-title">Cards</span><span class="scene-sub">Setting up the Courtroom · Marcas rojas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Cards)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">PT Card Women (6)</span><span class="chip">PT Card Men (6)</span><span class="chip">Card Women 7+8</span><span class="chip">Card Men 7+8</span><span class="chip">Alice</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Viamonte 3 — mesa con máquina de escribir (trapo en el corte de corazón, 2 hojas A4 rosas)</li><li>Viamonte 1 — banco rojo y banqueta de corazón</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Colchones (mattresses)</li><li>Truck USC: gavel (Queen) junto al trono</li><li>Frente al truck: silla roja (White Rabbit) mirando a escena; pedestal de tartaletas (set Tucumán)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>1 bandeja liviana con tartaleta suelta (JA hedgehog)</li><li>2 alabardas (Guards)</li><li>1 cabeza decapitada (Props)</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Card Women/Men — corps de cartas (puntas rosas / zapatillas blancas)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>USC truck (podio) con tronos y gavel en posición</li><li>Colchones preseteados para la persecución/caídas</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1m5f4XUAEkew_94UIvZmokxv3Uv6IggVD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Máquina de escribir y mesa</span></a><a class="imgcard" href="https://drive.google.com/file/d/1rNww4ykHAiWShY623Ur7srEa2Esg2Kkj/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Posición armario chico Reina (Tucumán)</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-7" data-search="white rabbit solo solo del conejo blanco white rabbit knave queen card women/men">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">07</span></span>
+    <span class="scene-titles"><span class="scene-title">White Rabbit Solo</span><span class="scene-sub">Solo del Conejo Blanco</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">Card Women/Men</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>1 bandeja liviana (sin correa) con 3 tartaletas con velcro (White Rabbit)</li><li>Cuerno de carnero (White Rabbit)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Silla roja (White Rabbit) frente al truck</li><li>Periódico bajo el trono Viamonte (King)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>White Rabbit — frac rojo (cambio desde Carroll)</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1O3UC1C88CG4ybId7CLFwjHaXBkvRbqnS/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 04</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-8" data-search="entrance of the court entrada de la corte court women (6) court men (6) king of hearts queen duchess cook mad hatter march hare dormouse caterpillar frog fish executioner white rabbit knave">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">08</span></span>
+    <span class="scene-titles"><span class="scene-title">Entrance of the Court</span><span class="scene-sub">Entrada de la Corte</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Court enters)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Court Women (6)</span><span class="chip">Court Men (6)</span><span class="chip">King of Hearts</span><span class="chip">Queen</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">White Rabbit</span><span class="chip">Knave</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Cetro (King)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Truck USC con tronos</li><li>Cetro (King)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>2 alabardas (Guards)</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Court Women — zapatos Rokko</li><li>Court Men — zapatillas rojas/negras pintadas</li><li>El King/Mad Hatter/March Hare/Dormouse vuelven en sus roles de la Corte</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Entrada de la Corte sobre el truck USC</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1J-3HGDAYWWQ-usBefBOqRK3pSC4Z6ozP/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 01</span></a><a class="imgcard" href="https://drive.google.com/file/d/1vpxVz_WJZMSBPgKudrPCsN5K1ipZwLMm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 02</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-9" data-search="queen&#x27;s tango solo solo de tango de la reina queen king court women/men">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">09</span></span>
+    <span class="scene-titles"><span class="scene-title">Queen&#x27;s Tango Solo</span><span class="scene-sub">Solo de tango de la Reina</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Queen&#x27;s Tango)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Court Women/Men</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Gavel (Queen) seteado junto al trono</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — tutú rojo, puntas rojas</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1rx62T-Rb4coRwqY-3zOCAE9vVAEYAz2Z/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Trono de la Reina 03</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-10" data-search="trial el juicio queen king knave alice white rabbit duchess cook mad hatter march hare dormouse caterpillar frog fish executioner court women/men solo card women/men (4)">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">10</span></span>
+    <span class="scene-titles"><span class="scene-title">Trial</span><span class="scene-sub">El juicio</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (The Trial)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><ul><li>Bandeja plateada con 1 tartaleta (Acto 2)</li><li>Newspaper bajo el trono (King)</li></ul></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Estrado / Corte armada</li><li>Máquina de escribir en mesa con ruedas (Viamonte 3)</li><li>Pedestal de tartaletas en forma de corazón</li><li>Soporte y 2 gavels</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>1 bandeja con tartaleta suelta</li><li>2 alabardas</li><li>1 cabeza decapitada</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Vuelven todos los personajes de la Corte en versión &#x27;juicio&#x27;</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Máquina de escribir en mesa rodante operada en escena</li><li>Gavels y soporte en posición</li></ul></div>
+    </div>
+
+    
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1m5f4XUAEkew_94UIvZmokxv3Uv6IggVD/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Máquina de escribir y mesa</span></a></div></div>
+  </div>
+</section>
+<section class="scene" id="scene-2-11" data-search="jack solo solo de jack knave of hearts (jack) court queen king">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">11</span></span>
+    <span class="scene-titles"><span class="scene-title">Jack Solo</span><span class="scene-sub">Solo de Jack</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><span class="chip">Queen</span><span class="chip">King</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Corte armada</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Knave — zapatillas rojas/marrones pintadas</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+    </div>
+
+    
+    
+  </div>
+</section>
+<section class="scene" id="scene-2-12" data-search="alice — it was me &#x27;fui yo&#x27; alice queen king knave court">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">12</span></span>
+    <span class="scene-titles"><span class="scene-title">Alice — It Was Me</span><span class="scene-sub">&#x27;Fui yo&#x27;</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Court</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Corte armada</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><p class="empty">— sin elementos registrados —</p></div>
+    </div>
+
+    
+    
+  </div>
+</section>
+<section class="scene" id="scene-2-13" data-search="trial pas de deux pas de deux del juicio alice knave (jack) court">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">13</span></span>
+    <span class="scene-titles"><span class="scene-title">Trial Pas de Deux</span><span class="scene-sub">Pas de deux del juicio</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Corte armada</li><li>Colchones (para caídas)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice y Knave — vestuario de Corte</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Colchones preseteados</li></ul></div>
+    </div>
+
+    
+    
+  </div>
+</section>
+<section class="scene" id="scene-2-14" data-search="chase la persecución alice knave queen king white rabbit duchess cook court women/men solo card women/men (4) hedgehogs (1) gardeners (3) 3 guards">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">14</span></span>
+    <span class="scene-titles"><span class="scene-title">Chase</span><span class="scene-sub">La persecución</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Chase) + Front gauze #2 (Vortex)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span><span class="chip">Hedgehogs (1)</span><span class="chip">Gardeners (3)</span><span class="chip">3 Guards</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Colchones</li><li>Gauze frontal #2 (Vortex) — bar 1</li><li>Negro total (3)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><p class="empty">— sin elementos registrados —</p></div>
+      </div>
+      <div class="wings"><h5>Hombros / biombos / cambios rápidos</h5><ul><li>US Tucumán crew room — Rabbit Q/C</li><li>Fuera de US Tucumán — Jack Q/C</li><li>DS Viamonte room — Alice Q/C</li></ul></div>
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Cambios rápidos hacia el Epílogo: Alice, Rabbit y Jack pasan a ropa moderna</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Gauze frontal #2 (Vortex)</li><li>Negro total</li><li>Cambios rápidos hacia ropa moderna</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Cambio al epílogo: Alice + novio se sientan en el banco; luces para ellos y avisar listo por canal 2. ¡Seguridad pértiga 23 SL!</li></ul></div>
+    
+  </div>
+</section>
+<section class="scene" id="scene-2-15" data-search="epilogue the deanery (en el presente) · marcas blancas alice (modern) carroll (modern) jack (modern) photographer">
+  <button class="scene-head" aria-expanded="false">
+    <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">15</span></span>
+    <span class="scene-titles"><span class="scene-title">Epilogue</span><span class="scene-sub">The Deanery (en el presente) · Marcas blancas</span></span>
+    <span class="scene-toggle">+</span>
+  </button>
+  <div class="scene-body">
+    <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 3 (Epílogo)</p>
+
+    <div class="block">
+      <h4>Personajes en escena</h4>
+      <div class="chips"><span class="chip">Alice (modern)</span><span class="chip">Carroll (modern)</span><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Utilería — seteo</h4>
+      <div class="stage">
+        <div class="side op"><span class="side-label">Viamonte <span class="side-ref">(OP)</span></span><p class="empty">— sin elementos registrados —</p></div>
+        <div class="side center"><span class="side-label">EN ESCENA</span><ul><li>Banco con el libro de Alice</li><li>Cartel de &#x27;Teas&#x27; (Tea sign)</li></ul></div>
+        <div class="side ps"><span class="side-label">Tucumán <span class="side-ref">(PS)</span></span><ul><li>Cámara con correa (Photographer)</li><li>iPhone y Beatbox (Jack)</li></ul></div>
+      </div>
+      
+    </div>
+
+    <div class="grid2">
+      <div class="block"><h4>Vestuario</h4><ul><li>Alice / Carroll / Jack — ropa moderna (cambio rápido ~1 min en SR)</li><li>Photographer — cámara al cuello</li></ul></div>
+      <div class="block"><h4>Maquinaria / Carpinteros</h4><ul><li>Set del banco del Deanery</li><li>Cartel &#x27;Teas&#x27; a Tucumán de la puerta del flat del Deanery</li></ul></div>
+    </div>
+
+    <div class="block notes"><h4>Notas del Stage Manager</h4><ul><li>Final: Conejo solo en el banco leyendo un libro. Telón baja.</li><li>Telón abajo: retirar el banco del Deanery para los saludos.</li></ul></div>
+    <div class="block"><h4>Imágenes de utilería <span class="hint">(abren en Drive)</span></h4><div class="imggrid"><a class="imgcard" href="https://drive.google.com/file/d/1qyHQRL9IOOhLn2E3O3bv1xJ-9MQtrfjq/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Banco del Deanery</span></a><a class="imgcard" href="https://drive.google.com/file/d/1QLvI6L9Rj5D6TuypMjk2AQuaa6wHLHKm/view" target="_blank" rel="noopener"><span class="imgcard-ico">▣</span><span>Silla del Deanery</span></a></div></div>
+  </div>
+</section>
+    </div>
+
+  </div>
+</div>
+
+<section class="sources">
+  <div class="wrap">
+    <h3>Documentos fuente (Google Drive)</h3>
+    <p>Toda la información de esta guía proviene de estos archivos de la carpeta de producción. Los enlaces abren el archivo original en Drive — son solo de consulta; no se modifica nada en la carpeta compartida.</p>
+    <div class="srcgrid"><a class="src" href="https://drive.google.com/file/d/1YNSQxJKQ45Ia4pyu8FZnfhV4zAii0PpG/view" target="_blank" rel="noopener">Props plot (utilería por escena)</a><a class="src" href="https://drive.google.com/file/d/1oMGog7YYzOVdZCD4tOl3zLUDG3HhobkO/view" target="_blank" rel="noopener">Props inventory (inventario completo)</a><a class="src" href="https://drive.google.com/file/d/1YSWBBPSWqYtUu1TkyOjxa2qEIMKf5qd1/view" target="_blank" rel="noopener">OP Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1Ptvh4VZ2yGmWhfOSNxzlrBmoA2qilcvB/view" target="_blank" rel="noopener">PS Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1iX2jb2AGOpybMbPc0BYC0Gk5iI0w1X_N/view" target="_blank" rel="noopener">Running list &amp; armoury numbers</a><a class="src" href="https://drive.google.com/file/d/1-35PUW23rCT8Os_YiRrpSpcVNZEcyejx/view" target="_blank" rel="noopener">Stage Manager doc (running notes)</a><a class="src" href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener">Cue Caller Score (partitura de cues)</a><a class="src" href="https://drive.google.com/file/d/1UODXkqALjzWLrv1NwD1dgFnOucDLXtcm/view" target="_blank" rel="noopener">Costume Cardex (vestuario detallado)</a><a class="src" href="https://drive.google.com/file/d/1DZidW17gbp1p_OlDNyDzk1IZOqmnteBw/view" target="_blank" rel="noopener">Scene Character Breakdown</a><a class="src" href="https://drive.google.com/file/d/1sCs9QUmJBursxbbI3CaP2OlpaCU6STu9/view" target="_blank" rel="noopener">Sceneskema (grilla personajes/escena)</a><a class="src" href="https://drive.google.com/file/d/1gM74w5EwBD416L8dGF8Uq7RbVWIkgZty/view" target="_blank" rel="noopener">Cast list</a><a class="src" href="https://drive.google.com/file/d/1ZbbL-oKA_77u8X-6RLu2N2DdnTXKRkSM/view" target="_blank" rel="noopener">Reference list — zapatos</a><a class="src" href="https://drive.google.com/file/d/1QnOvO1sg6czMoAxT3A1wgkb3t15NfWVU/view" target="_blank" rel="noopener">Dressers lists (vestuaristas)</a><a class="src" href="https://drive.google.com/file/d/1Epo2jkXZXgb8AWFvpCgrJsFxzApIzKLX/view" target="_blank" rel="noopener">Consummables (consumibles por función)</a><a class="src" href="https://drive.google.com/file/d/1buQOvr4EFQz9Ba_avxVO5VD91pj6vORs/view" target="_blank" rel="noopener">Props photos (PDF)</a><a class="src" href="https://drive.google.com/drive/folders/1FN0bu9Ui4iGGhtYJrtejZX4Z1ZywMogl" target="_blank" rel="noopener">📁 Carpeta — Props Photographs</a><a class="src" href="https://drive.google.com/drive/folders/1KkDmRgdx8zhdzf8U8K8Wi9pyjmt-nesD" target="_blank" rel="noopener">📁 Carpeta — Alice costume photos</a><a class="src" href="https://drive.google.com/drive/folders/1bDh1X51MLbxGGcD2j3EUeocG8I2Tijmw" target="_blank" rel="noopener">📁 Carpeta raíz de la producción</a></div>
+  </div>
+</section>
+
+<footer>
+  Guía de referencia interna · armada a partir de la Show Bible (Royal Ballet / Royal Danish Ballet) y adaptada al orden de funciones del Teatro Colón.<br>
+  Las correspondencias entre el orden del Colón y las numeraciones de origen están indicadas en cada escena; confirmar los puntos marcados con ⚠ con la dirección coreográfica.
+</footer>
+
+<script>
+document.querySelectorAll('.scene-head').forEach(function(b){
+  b.addEventListener('click',function(){
+    var s=b.closest('.scene'); var open=s.classList.toggle('open');
+    b.setAttribute('aria-expanded',open);
+  });
+});
+document.querySelectorAll('.idx-head').forEach(function(b){
+  b.addEventListener('click',function(){
+    var item=b.closest('.idx-item'); item.classList.toggle('open');
+  });
+  b.addEventListener('dblclick',function(){
+    jump(b.getAttribute('data-target'));
+  });
+});
+document.querySelectorAll('.idx-title').forEach(function(t){
+  t.style.cursor='pointer';
+  t.addEventListener('click',function(e){
+    e.stopPropagation();
+    jump(t.closest('.idx-head').getAttribute('data-target'));
+  });
+});
+function jump(id){
+  var sc=document.getElementById(id);
+  if(!sc) return;
+  if(!sc.classList.contains('open')){ sc.querySelector('.scene-head').click(); }
+  sc.scrollIntoView({behavior:'smooth',block:'start'});
+}
+var search=document.getElementById('search');
+search.addEventListener('input',function(){
+  var q=search.value.trim().toLowerCase();
+  document.querySelectorAll('.scene').forEach(function(s){
+    var hit=!q || (s.getAttribute('data-search')||'').indexOf(q)>-1;
+    s.style.display=hit?'':'none';
+  });
+});
+</script>
+</body>
+</html>
