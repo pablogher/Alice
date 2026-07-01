@@ -82,6 +82,28 @@ ul.idx{list-style:none;margin:0;padding:0}
 .scene-title{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;line-height:1.1}
 .scene-sub{color:var(--muted);font-size:.86rem;margin-top:2px}
 .scene-toggle{font-family:Fraunces,serif;font-size:1.6rem;color:var(--faint);line-height:1;transition:transform .2s}
+.scene-dur{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.06em;color:var(--brass);
+  border:1px solid var(--line);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.audio-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4CAF50;
+  box-shadow:0 0 0 2px rgba(76,175,80,.25);vertical-align:middle;margin-left:2px}
+.scene-bar{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.04em;color:#7FB3C9;
+  border:1px solid #33505e;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.idx-dur{font-family:"JetBrains Mono",monospace;font-size:.64rem;color:var(--faint);letter-spacing:.04em}
+.meta-time{font-size:.84rem;color:var(--ink);background:#1a1511;border:1px solid var(--line);border-radius:9px;
+  padding:8px 12px;margin:16px 0 0}
+.meta-time strong{color:var(--brass);font-weight:600}
+.audio-block h4{color:#C99B7F}
+.audiogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.audiocard{display:flex;align-items:flex-start;gap:10px;text-decoration:none;background:var(--panel2);
+  border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+.audiocard:hover{border-color:#C99B7F}
+.audio-ico{color:#C99B7F;font-size:1.05rem;line-height:1.2}
+.audio-txt{display:flex;flex-direction:column}
+.audio-name{font-size:.85rem;color:var(--ink);font-family:"JetBrains Mono",monospace}
+.audio-cue{font-size:.76rem;color:var(--muted);margin-top:2px}
+.audio-trigger{font-size:.76rem;color:#D9C3B0;margin-top:5px;line-height:1.45}
+.audio-trigger strong{color:#C99B7F;font-weight:600}
+.audio-caption{font-size:.76rem;color:var(--faint);margin:0 0 10px;font-style:italic}
 .scene.open .scene-toggle{transform:rotate(45deg);color:var(--red)}
 .scene-body{display:none;padding:4px 18px 22px;border-top:1px solid var(--line)}
 .scene.open .scene-body{display:block}
@@ -196,105 +218,105 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-1">
         <span class="idx-no">A1·01</span>
-        <span class="idx-title">Prologue</span>
+        <span class="idx-title">Prologue <span class="audio-dot" title="Tiene audio"></span> <span class="idx-dur">~12 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice (1 + 2)</span><span class="chip">Carroll / White Rabbit (como Carroll)</span><span class="chip">Jack (como Jack)</span><span class="chip">Mother</span><span class="chip">Father</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Edita</span><span class="chip">Lorina</span><span class="chip">Magician</span><span class="chip">Vicar</span><span class="chip">Verger</span><span class="chip">Raj</span><span class="chip">Butler</span><span class="chip">Indian Servant</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Maids (3)</span><span class="chip">Raj Wives (2)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-2">
         <span class="idx-no">A1·02</span>
-        <span class="idx-title">Falling Alice</span>
+        <span class="idx-title">Falling Alice <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Falling Alice (4 bailarines: brazo der., brazo izq., piernas, cuerpo/cabeza)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-3">
         <span class="idx-no">A1·03</span>
-        <span class="idx-title">Hallway Solo</span>
+        <span class="idx-title">Hallway Solo <span class="audio-dot" title="Tiene audio"></span> <span class="idx-dur">~7 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen (Queen 1)</span><span class="chip">Knave of Hearts</span><span class="chip">Guard (Indian Servant)</span><span class="chip">3 Guards (figuración)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-4">
         <span class="idx-no">A1·04</span>
-        <span class="idx-title">Pool of Tears</span>
+        <span class="idx-title">Pool of Tears <span class="idx-dur">~4 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Edita → Eaglet</span><span class="chip">Lorina → Lory</span><span class="chip">Tear boys (6)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-5">
         <span class="idx-no">A1·05</span>
-        <span class="idx-title">Alice Solo</span>
+        <span class="idx-title">Alice Solo <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice (3)</span><span class="chip">(según versión: Caucus Animals / Rooster — confirmar con dirección)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-6">
         <span class="idx-no">A1·06</span>
-        <span class="idx-title">Paper Boat</span>
+        <span class="idx-title">Paper Boat <span class="idx-dur">~4 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-7">
         <span class="idx-no">A1·07</span>
-        <span class="idx-title">Fish and Frog</span>
+        <span class="idx-title">Fish and Frog <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Cook</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-8">
         <span class="idx-no">A1·08</span>
-        <span class="idx-title">Pig and Pepper</span>
+        <span class="idx-title">Pig and Pepper <span class="audio-dot" title="Tiene audio"></span> <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Cook</span><span class="chip">Duchess</span><span class="chip">Alice</span><span class="chip">Footman/Fish</span><span class="chip">Footman/Frog</span><span class="chip">Queen 1 (al cierre, &#x27;The Knave&#x27;)</span><span class="chip">King of Hearts</span><span class="chip">Executioner</span><span class="chip">Guard</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-9">
         <span class="idx-no">A1·09</span>
-        <span class="idx-title">Cheshire Cat</span>
+        <span class="idx-title">Cheshire Cat <span class="audio-dot" title="Tiene audio"></span> <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (cabeza)</span><span class="chip">Cheshire Cat (7 piezas)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-10">
         <span class="idx-no">A1·10</span>
-        <span class="idx-title">White Rabbit and Alice (Tik Tok)</span>
+        <span class="idx-title">White Rabbit and Alice (Tik Tok) <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-11">
         <span class="idx-no">A1·11</span>
-        <span class="idx-title">Tea Party</span>
+        <span class="idx-title">Tea Party <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Mad Hatter (Magician)</span><span class="chip">March Hare (Vicar)</span><span class="chip">Dormouse (Verger)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-12">
         <span class="idx-no">A1·12</span>
-        <span class="idx-title">2nd Cheshire Cat</span>
+        <span class="idx-title">2nd Cheshire Cat <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Cheshire Cat (4 piezas)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-13">
         <span class="idx-no">A1·13</span>
-        <span class="idx-title">Caterpillar</span>
+        <span class="idx-title">Caterpillar <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Raj → Caterpillar</span><span class="chip">Caterpillar Women (4)</span><span class="chip">Caterpillar Tail (8)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-14">
         <span class="idx-no">A1·14</span>
-        <span class="idx-title">Alice — back in the Hallway</span>
+        <span class="idx-title">Alice — back in the Hallway <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-1-15">
         <span class="idx-no">A1·15</span>
-        <span class="idx-title">Flowers</span>
+        <span class="idx-title">Flowers <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Flower Soloist Women (4)</span><span class="chip">Flower Women (6)</span><span class="chip">Flower Soloist Men (4)</span><span class="chip">Flower Man (6)</span><span class="chip">Knave of Hearts</span><span class="chip">Guards (2)</span></div>
@@ -305,105 +327,105 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-1">
         <span class="idx-no">A2·01</span>
-        <span class="idx-title">Gardeners</span>
+        <span class="idx-title">Gardeners <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6, niños)</span><span class="chip">Hedgehogs (4, niños)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">3 Guards</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-2">
         <span class="idx-no">A2·02</span>
-        <span class="idx-title">Queen&#x27;s Entrance</span>
+        <span class="idx-title">Queen&#x27;s Entrance <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">King of Hearts</span><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Executioner</span><span class="chip">Gardeners (3)</span><span class="chip">Hedges (6)</span><span class="chip">Alice</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-3">
         <span class="idx-no">A2·03</span>
-        <span class="idx-title">Tart Adagio</span>
+        <span class="idx-title">Tart Adagio <span class="idx-dur">~4 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Tart Suitors (4)</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Queen</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-4">
         <span class="idx-no">A2·04</span>
-        <span class="idx-title">Croquet Match</span>
+        <span class="idx-title">Croquet Match <span class="idx-dur">~4 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Queen (Big Box)</span><span class="chip">White Rabbit</span><span class="chip">Flamingo (5)</span><span class="chip">Alice</span><span class="chip">Hedges (6)</span><span class="chip">Hedgehogs</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-5">
         <span class="idx-no">A2·05</span>
-        <span class="idx-title">Jack is Arrested</span>
+        <span class="idx-title">Jack is Arrested <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Knave of Hearts</span><span class="chip">Guards</span><span class="chip">Executioner</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Alice</span><span class="chip">White Rabbit</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-6">
         <span class="idx-no">A2·06</span>
-        <span class="idx-title">Cards</span>
+        <span class="idx-title">Cards <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">PT Card Women (6)</span><span class="chip">PT Card Men (6)</span><span class="chip">Card Women 7+8</span><span class="chip">Card Men 7+8</span><span class="chip">Alice</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-7">
         <span class="idx-no">A2·07</span>
-        <span class="idx-title">White Rabbit Solo</span>
+        <span class="idx-title">White Rabbit Solo <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">White Rabbit</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">Card Women/Men</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-8">
         <span class="idx-no">A2·08</span>
-        <span class="idx-title">Entrance of the Court</span>
+        <span class="idx-title">Entrance of the Court <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Court Women (6)</span><span class="chip">Court Men (6)</span><span class="chip">King of Hearts</span><span class="chip">Queen</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">White Rabbit</span><span class="chip">Knave</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-9">
         <span class="idx-no">A2·09</span>
-        <span class="idx-title">Queen&#x27;s Tango Solo</span>
+        <span class="idx-title">Queen&#x27;s Tango Solo <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Court Women/Men</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-10">
         <span class="idx-no">A2·10</span>
-        <span class="idx-title">Trial</span>
+        <span class="idx-title">Trial <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Alice</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Mad Hatter</span><span class="chip">March Hare</span><span class="chip">Dormouse</span><span class="chip">Caterpillar</span><span class="chip">Frog</span><span class="chip">Fish</span><span class="chip">Executioner</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-11">
         <span class="idx-no">A2·11</span>
-        <span class="idx-title">Jack Solo</span>
+        <span class="idx-title">Jack Solo <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Knave of Hearts (Jack)</span><span class="chip">Court</span><span class="chip">Queen</span><span class="chip">King</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-12">
         <span class="idx-no">A2·12</span>
-        <span class="idx-title">Alice — It Was Me</span>
+        <span class="idx-title">Alice — It Was Me <span class="idx-dur">~2 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">Knave</span><span class="chip">Court</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-13">
         <span class="idx-no">A2·13</span>
-        <span class="idx-title">Trial Pas de Deux</span>
+        <span class="idx-title">Trial Pas de Deux <span class="idx-dur">~5 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave (Jack)</span><span class="chip">Court</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-14">
         <span class="idx-no">A2·14</span>
-        <span class="idx-title">Chase</span>
+        <span class="idx-title">Chase <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice</span><span class="chip">Knave</span><span class="chip">Queen</span><span class="chip">King</span><span class="chip">White Rabbit</span><span class="chip">Duchess</span><span class="chip">Cook</span><span class="chip">Court Women/Men</span><span class="chip">Solo Card Women/Men (4)</span><span class="chip">Hedgehogs (1)</span><span class="chip">Gardeners (3)</span><span class="chip">3 Guards</span></div>
     </li><li class="idx-item">
       <button class="idx-head" data-target="scene-2-15">
         <span class="idx-no">A2·15</span>
-        <span class="idx-title">Epilogue</span>
+        <span class="idx-title">Epilogue <span class="audio-dot" title="Tiene audio"></span> <span class="idx-dur">~3 min</span></span>
         <span class="idx-exp">▸</span>
       </button>
       <div class="idx-chars"><span class="chip">Alice (modern)</span><span class="chip">Carroll (modern)</span><span class="chip">Jack (modern)</span><span class="chip">Photographer</span></div>
@@ -432,10 +454,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 <section class="scene" id="scene-1-1" data-search="prologue the deanery (en el pasado) alice (1 + 2) carroll / white rabbit (como carroll) jack (como jack) mother father duchess cook edita lorina magician vicar verger raj butler indian servant footman/fish footman/frog maids (3) raj wives (2)">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">01</span></span>
-    <span class="scene-titles"><span class="scene-title">Prologue</span><span class="scene-sub">The Deanery (en el pasado)</span></span>
+    <span class="scene-titles"><span class="scene-title">Prologue <span class="audio-dot" title="Esta escena tiene audio"></span></span><span class="scene-sub">The Deanery (en el pasado)</span></span>
+    <span class="scene-dur">~12 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~12 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 0′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 1 · Marcas blancas · Proyección F.O.H.</p>
 
     <div class="block">
@@ -465,6 +489,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><div class="audiogrid"><a class="audiocard" href="https://drive.google.com/file/d/1gz_ffERiwgl0H0nlTAuh2pQg1LZtHP0L/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">2 Alice GardenParty.wav</span><span class="audio-cue">Cue «Party» — ambiente de fiesta del Deanery</span><span class="audio-trigger"><strong>Pie:</strong> Q1 · QLab 3.5 — Play a ~12:00 del acto (durante la fiesta del Deanery). Fade out: Q2 (QLab 5.5) a ~12:15.</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1lK3zkYAOLo2kC1y9I2CQCkyxVCJshZs7/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice party cutlery.wav</span><span class="audio-cue">Ambiente de vajilla / cubiertos</span><span class="audio-trigger"><strong>Pie:</strong> Capa del ambiente de fiesta (~12:00, junto con «Party»). Sin cue propio en la planilla — confirmar con Sonido.</span></span></a></div></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de hada lila (corpiño de satén lila, mangas de organza, pollera de tul con lentejuelas, alas, vincha, medias rosas, puntas rosas)</li><li>Mother — vestido victoriano verde claro, gargantilla, sombrero de paja de ala ancha (se quita en escena), delantal de organza</li><li>Cook — blusa negra de cuello blanco festoneado, delantal blanco, cofia, botas con cordones</li><li>Maids — blusa de algodón blanca, pollera de lana negra, delantal y cofia blancos</li><li>Raj Wives — top de brocato crema, sari de gasa con borde dorado, tiara</li><li>Carroll/Rabbit — camisa de cuello de alas, frac, chaleco a cuadros (zapatos: jazz negros / Adidas)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Telón baja — se señaliza el inicio de función</li><li>Apertura de la mesa del Deanery (mesa larga con orificio) — Efectos Escénicos</li><li>Plataforma de marioneta preseteada (Alice puppet +3.5M guardada en wing Tucumán durante el preset del Deanery)</li><li>Proyección F.O.H. usada para el Deanery (proyectores Casio)</li><li>9 min: trolley empujado fuerte hacia Viamonte, 2º hombro</li><li>11 min: fuego en flash de cámara; la cámara deja de girar en el blackout</li></ul></div>
@@ -479,9 +505,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">02</span></span>
     <span class="scene-titles"><span class="scene-title">Falling Alice</span><span class="scene-sub">Down the Rabbit Hole (video)</span></span>
+    <span class="scene-dur">~2 min</span><span class="scene-bar">c. 4</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 12′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> ≈ compás 4 (line-up del Vortex / Front Gauze). Botella «Drink me» c. 17; marioneta de Alicia c. 18.</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 2 · Marcas naranjas</p>
 
     <div class="block">
@@ -511,6 +539,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Falling Alice — remera negra de manga larga, chaqueta kung-fu negra, pantalón negro, capucha, guantes negros, medias negras sobre las zapatillas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Cambio a Falling Alice — ¡ATENCIÓN seguridad! Vigilar especialmente el telón del medio</li><li>Botella &#x27;Drink me&#x27; vuela (bar 17)</li><li>Marioneta de Alice operada desde la plataforma (bar 18)</li><li>Brazo extensible saca el pastel &#x27;Eat me&#x27;</li><li>DOME (cúpula) suelta pétalos — Efectos Escénicos</li><li>Biombo elástico volado</li></ul></div>
@@ -524,10 +554,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 <section class="scene" id="scene-1-3" data-search="hallway solo alice + hallway chase alice white rabbit queen (queen 1) knave of hearts guard (indian servant) 3 guards (figuración)">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">03</span></span>
-    <span class="scene-titles"><span class="scene-title">Hallway Solo</span><span class="scene-sub">Alice + Hallway Chase</span></span>
+    <span class="scene-titles"><span class="scene-title">Hallway Solo <span class="audio-dot" title="Esta escena tiene audio"></span></span><span class="scene-sub">Alice + Hallway Chase</span></span>
+    <span class="scene-dur">~7 min</span><span class="scene-bar">c. 37</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~7 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 14′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> Cuarto pequeño / elastic slits ≈ compás 37 (secuencia desde Cue 20).</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 3 (The Hallway)</p>
 
     <div class="block">
@@ -557,6 +589,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       <p class="bsas-note">Agrupa dos momentos del pasillo: el ingreso de Reina/guardias con el carro chico y la secuencia del cuarto pequeño con el brazo mecánico del pastel.</p>
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><div class="audiogrid"><a class="audiocard" href="https://drive.google.com/file/d/1od4Zjg9oVjjAKxp5_pqnwTwtDaA-lUrw/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">3 Alice FridgeDrone.wav</span><span class="audio-cue">Cues «Fridge 1 / Fridge 2» — drone del pasillo</span><span class="audio-trigger"><strong>Pie:</strong> Q3 · QLab 7 — Play «Fridge 1» a ~15:30 (fade out Q4/QLab 8 a ~15:55). Q5 · QLab 13 — Play «Fridge 2» a ~19:20 (fade out Q6/QLab 14 a ~20:25).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1Kvd2_eFy6QNbXsLJGnpmRcRqr5-YZzhY/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Bigger 1a.wav</span><span class="audio-cue">Cue «Getting Bigger» (variante a)</span><span class="audio-trigger"><strong>Pie:</strong> Q9 · QLab 19 — Play «Getting Bigger» a ~22:35 del acto (cuando Alicia crece con «Eat me»); se reproduce hasta el final, sin fade manual.</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1y3os1KaAjhM5J47zyi9xbWjtKAvpsNG7/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Bigger 1b.wav</span><span class="audio-cue">Cue «Getting Bigger» (variante b)</span><span class="audio-trigger"><strong>Pie:</strong> Variante del cue «Getting Bigger» (Q9 · QLab 19).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1LZf2zx3VglrZTAzr7iIhg2ATDuRq3UWT/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Bigger 1c.wav</span><span class="audio-cue">Cue «Getting Bigger» (variante c)</span><span class="audio-trigger"><strong>Pie:</strong> Variante del cue «Getting Bigger» (Q9 · QLab 19).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/10Qfd3E-gGXl1x3_Nu6LTbRrja59RXKVE/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Bigger 1d.wav</span><span class="audio-cue">Cue «Getting Bigger» (variante d)</span><span class="audio-trigger"><strong>Pie:</strong> Variante del cue «Getting Bigger» (Q9 · QLab 19).</span></span></a></div><p class="bsas-note" style="border-left-color:#C99B7F">Cue «Getting Smaller» (achicamiento): Q7 · QLab 15 — Play a ~21:00, fade out Q8 (QLab 18) a ~21:50. Falta ubicar el archivo — confirmar con Sonido.</p></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido lila de tafetán (cambio de 1 min 41 s desde el vestido de hada)</li><li>White Rabbit — frac, galera negra</li><li>Knave — tops rojo/blanco elásticos, medias rojas</li><li>Queen — (Mother aún) transición hacia Queen of Hearts</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Operación de la puerta pequeña (Small Door) — Efectos Escénicos</li><li>Hall gauze (gasa) en posición</li><li>Biombo elástico volado</li></ul></div>
@@ -571,9 +605,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">04</span></span>
     <span class="scene-titles"><span class="scene-title">Pool of Tears</span><span class="scene-sub">El charco de lágrimas</span></span>
+    <span class="scene-dur">~4 min</span><span class="scene-bar">c. 37</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~4 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 21′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> Pantalla elástica de lágrimas ≈ compás 37 (brazo + pez Cue 21; natación Cue 22).</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 4</p>
 
     <div class="block">
@@ -603,6 +639,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile (dance dress)</li><li>Edita / Lorina (si se usan como Eaglet / Lory) — puntas pintadas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Sistema de olas (tela)</li><li>Bote sobre vara (Tucumán)</li><li>Botella sobre vara (Viamonte)</li></ul></div>
@@ -617,9 +655,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">05</span></span>
     <span class="scene-titles"><span class="scene-title">Alice Solo</span><span class="scene-sub">Solo de Alice</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 25′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Corresponde al área de la Caucus Race del Royal Ballet (Acto 1, Esc. 5). El orden del Colón lo titula &#x27;Alice Solo&#x27;; verificar contenido coreográfico.</p>
 
     <div class="block">
@@ -649,6 +689,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Cronómetro volado (flown stopwatch)</li><li>Bandera de largada</li></ul></div>
@@ -663,9 +705,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">06</span></span>
     <span class="scene-titles"><span class="scene-title">Paper Boat</span><span class="scene-sub">El bote de papel (proyección de libélula)</span></span>
+    <span class="scene-dur">~4 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~4 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 27′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 6</p>
 
     <div class="block">
@@ -695,6 +739,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       <p class="bsas-note">Durante &#x27;Paper Boat&#x27; se arma todo lo de &#x27;Pig &amp; Pepper&#x27;: trasto grande · mesa de chorizos · sillón cerdo · cuchillas (2) (cocinera) · pimenteros (2) · bebé cerdo · bebé normal · tapa de olla (cocinera) · olla y cuchara (Duquesa) · cabeza del gato.</p>
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Bote trucado entra rodando</li><li>Proyección de libélula (Dragonfly)</li><li>Cuadro &#x27;Home Sweet Home&#x27; baja con gancho</li></ul></div>
@@ -709,9 +755,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">07</span></span>
     <span class="scene-titles"><span class="scene-title">Fish and Frog</span><span class="scene-sub">Pez y Rana</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 31′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 7</p>
 
     <div class="block">
@@ -741,6 +789,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Fish — librea, zapatillas grises pintadas</li><li>Frog — librea, zapatillas verdes pintadas</li><li>Duchess — corsé acolchado, crinolina, guantes largos</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Kitchen truck en posición</li><li>Picadora con cerdo de patas móviles</li></ul></div>
@@ -754,10 +804,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 <section class="scene" id="scene-1-8" data-search="pig and pepper cerdo y pimienta · marcas rojas cook duchess alice footman/fish footman/frog queen 1 (al cierre, &#x27;the knave&#x27;) king of hearts executioner guard">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">08</span></span>
-    <span class="scene-titles"><span class="scene-title">Pig and Pepper</span><span class="scene-sub">Cerdo y Pimienta · Marcas rojas</span></span>
+    <span class="scene-titles"><span class="scene-title">Pig and Pepper <span class="audio-dot" title="Esta escena tiene audio"></span></span><span class="scene-sub">Cerdo y Pimienta · Marcas rojas</span></span>
+    <span class="scene-dur">~5 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 34′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 8</p>
 
     <div class="block">
@@ -787,6 +839,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><div class="audiogrid"><a class="audiocard" href="https://drive.google.com/file/d/1JjRb4buO4laoKulBodDliaCQXUqYWFwK/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Cleaver 1-4b.wav</span><span class="audio-cue">Cue «Cleaver» — golpe de cuchilla</span><span class="audio-trigger"><strong>Pie:</strong> Q10 · QLab 24.5 — Play a ~34:00 del acto (golpe de cuchilla de la Cocinera); se reproduce hasta el final, sin fade manual.</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1zf-msN3hG-Y4SZ7scEssqmHFBLiz3ZS3/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">pig-squeal.wav</span><span class="audio-cue">Cue «Pig squeal» — chillido del cerdo</span><span class="audio-trigger"><strong>Pie:</strong> Q10.5 · QLab 24.7 — Play a ~38:40 del acto; se reproduce hasta el final, sin fade manual (agregado en 2019).</span></span></a></div></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Cook — delantal manchado de rosa, camisa de lino envejecida</li><li>Duchess — delantal ensangrentado (bloodied apron)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Kitchen truck en movimiento</li><li>Cambio de escena: se retira silla y bebé a Viamonte</li></ul></div>
@@ -800,10 +854,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 <section class="scene" id="scene-1-9" data-search="cheshire cat el gato de cheshire (marionetas) alice cheshire cat (cabeza) cheshire cat (7 piezas)">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">09</span></span>
-    <span class="scene-titles"><span class="scene-title">Cheshire Cat</span><span class="scene-sub">El Gato de Cheshire (marionetas)</span></span>
+    <span class="scene-titles"><span class="scene-title">Cheshire Cat <span class="audio-dot" title="Esta escena tiene audio"></span></span><span class="scene-sub">El Gato de Cheshire (marionetas)</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 39′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 9 + Mad Hatter&#x27;s cloth #1</p>
 
     <div class="block">
@@ -823,6 +879,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><div class="audiogrid"><a class="audiocard" href="https://drive.google.com/file/d/1t-8XQSDQKRil6Regu7cvVA4yBi_cBNaW/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice CCat 1a2.wav</span><span class="audio-cue">Cue «Cheshire Cat 1» (parte a)</span><span class="audio-trigger"><strong>Pie:</strong> Q11 · QLab 25 — Play al arranque del bloque del Gato (~00:00 en la referencia del Acto II NBC, es decir el inicio de la sección del Gato de Cheshire); se reproduce hasta el final.</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1MfzHk3m1b_d9TjgFRW1YsfP-UUiZdzFn/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice CCat 1b2.wav</span><span class="audio-cue">Cue «Cheshire Cat 1» (parte b)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Cheshire Cat 1» (Q11 · QLab 25).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1WrJ0iVux5tUCeMG4wmPYQsZp53qCLb_-/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice CCat 1c2.wav</span><span class="audio-cue">Cue «Cheshire Cat 1» (parte c)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Cheshire Cat 1» (Q11 · QLab 25).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1Anf3xfBWyZkxzKQ9J_aWPdHwIAuNJj68/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice CCat 1d2.wav</span><span class="audio-cue">Cue «Cheshire Cat 1» (parte d)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Cheshire Cat 1» (Q11 · QLab 25).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1SuBY_boMELxB4WJMpynrOUwtcLv2eSdx/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice CCat 1e2.wav</span><span class="audio-cue">Cue «Cheshire Cat 1» (parte e)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Cheshire Cat 1» (Q11 · QLab 25).</span></span></a></div></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras (Costume Dept.)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Mad Hatter&#x27;s cloth en posición</li><li>Piezas del Gato armadas desde DS Viamonte</li></ul></div>
@@ -837,9 +895,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">10</span></span>
     <span class="scene-titles"><span class="scene-title">White Rabbit and Alice (Tik Tok)</span><span class="scene-sub">Conejo blanco y Alice</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 42′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Transición hacia la Tea Party (Royal Ballet Esc. 10). El Colón la titula &#x27;Tik Tok&#x27; (reloj).</p>
 
     <div class="block">
@@ -869,6 +929,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>White Rabbit</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Preparación del Theatre truck (Mad Hatter) detrás del telón del medio</li></ul></div>
@@ -883,9 +945,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">11</span></span>
     <span class="scene-titles"><span class="scene-title">Tea Party</span><span class="scene-sub">Mad Hatter&#x27;s Party · Marcas violetas</span></span>
+    <span class="scene-dur">~5 min</span><span class="scene-bar">c. 26</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 44′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> Telón del Sombrerero (Hatter cloth) ≈ compás 26 (Cue 26.5).</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 10 (Theatre truck)</p>
 
     <div class="block">
@@ -915,6 +979,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><p class="bsas-note" style="border-left-color:#C99B7F">Micrófonos del Sombrerero (tap): 2 lavaliers amplifican los zapatos. MICS ON a ~2:45 del Acto II (NBC) y MICS OFF a ~7:15 (fin de la escena del Sombrerero).</p></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Mad Hatter — galera, frac de retazos (zapatos de tap negros)</li><li>March Hare — orejas y cola de liebre, blazer a rayas amarillas</li><li>Dormouse — chaleco rosa y dorado, cola de ratón larga, pompones rojos</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Theatre truck (Mad Hatter) entra</li><li>Mad Hatter&#x27;s cloth #2</li></ul></div>
@@ -929,9 +995,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">12</span></span>
     <span class="scene-titles"><span class="scene-title">2nd Cheshire Cat</span><span class="scene-sub">Segundo Gato de Cheshire</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 49′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Reaparición del Gato (Sceneskema: &#x27;Chesire Cat 4 parts&#x27; en &#x27;Alice alone&#x27;). Royal Ballet Esc. 11.</p>
 
     <div class="block">
@@ -961,6 +1029,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><p class="bsas-note" style="border-left-color:#C99B7F">El Gato reaparece más adelante como cue «Cheshire Cat 3»: Q12 · QLab 43 — Play a ~15:00 del Acto III (= Acto 2 BsAs), fade out Q13 (QLab 49) a ~15:30. Confirmar con Sonido qué archivo dispara el 2do Gato.</p></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li><li>Cheshire Cat — medias negras</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Negro total (full black)</li><li>Gasa azul: bleedthru y vuelo</li><li>Mad Hatter&#x27;s cloth</li></ul></div>
@@ -975,9 +1045,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">13</span></span>
     <span class="scene-titles"><span class="scene-title">Caterpillar</span><span class="scene-sub">La Oruga · Marcas rayadas</span></span>
+    <span class="scene-dur">~5 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 51′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 12</p>
 
     <div class="block">
@@ -1007,6 +1079,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Caterpillar/Raj — zapatillas color piel + zapatos dorados enrollados</li><li>Caterpillar Tail — puntas azul/violeta pintadas</li><li>Edita vestida de personaje chino (saco de brocato rosa, sombrero chino)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Mushroom truck en posición</li><li>Negro total + gasa azul</li><li>Peasouper (máquina de niebla) ×2</li></ul></div>
@@ -1021,9 +1095,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">14</span></span>
     <span class="scene-titles"><span class="scene-title">Alice — back in the Hallway</span><span class="scene-sub">Hall of Doors</span></span>
+    <span class="scene-dur">~2 min</span><span class="scene-bar">c. 44</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 56′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> Gasa del pasillo (Hall of Doors) ≈ compás 44 (Cue 29.1).</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 13 (Hall of doors)</p>
 
     <div class="block">
@@ -1043,6 +1119,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Negro total</li><li>Hall gauze en posición</li></ul></div>
@@ -1057,9 +1135,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A1</span><span class="scene-no">15</span></span>
     <span class="scene-titles"><span class="scene-title">Flowers</span><span class="scene-sub">The Flower Garden</span></span>
+    <span class="scene-dur">~5 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 58′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 1, Esc. 14</p>
 
     <div class="block">
@@ -1076,6 +1156,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       </div>
       
     </div>
+
+    
 
     
 
@@ -1110,9 +1192,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">01</span></span>
     <span class="scene-titles"><span class="scene-title">Gardeners</span><span class="scene-sub">The Queen of Hearts Garden (Maze) · Marcas verdes</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 0′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (apertura)</p>
 
     <div class="block">
@@ -1142,6 +1226,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — corpiño de corazón rojo, tutú rojo, corona, puntas rojas</li><li>Gardeners — botas especiales verde/rojo</li><li>Flamingo Ladies — puntas rosas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Setos cónicos sobre ruedas entran (estudiantes adentro)</li><li>Arbusto de rosas central por control remoto</li><li>Armario gigante de la Reina entra desde DSPS1</li><li>Banco rojo en Viamonte 1</li><li>Reset de alabardas del Acto 1</li></ul></div>
@@ -1156,9 +1242,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">02</span></span>
     <span class="scene-titles"><span class="scene-title">Queen&#x27;s Entrance</span><span class="scene-sub">Entrada de la Reina</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 3′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1</p>
 
     <div class="block">
@@ -1188,6 +1276,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — sale del &#x27;Big Box&#x27; (vestido-prop de madera roja)</li><li>King of Hearts — botas jazz negras, zapatos rococó rojos</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Armario gigante / Big Box: la Reina emerge</li><li>Podium truck con tronos en posición</li></ul></div>
@@ -1202,9 +1292,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">03</span></span>
     <span class="scene-titles"><span class="scene-title">Tart Adagio</span><span class="scene-sub">Adagio de las tartaletas</span></span>
+    <span class="scene-dur">~4 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~4 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 6′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (Tart Adagio)</p>
 
     <div class="block">
@@ -1224,6 +1316,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Tart Suitors / Court Men — zapatillas rojas o negras pintadas (con velcro cosido)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
@@ -1238,9 +1332,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">04</span></span>
     <span class="scene-titles"><span class="scene-title">Croquet Match</span><span class="scene-sub">Partido de croquet</span></span>
+    <span class="scene-dur">~4 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~4 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 10′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (Croquet Match)</p>
 
     <div class="block">
@@ -1270,6 +1366,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Flamingo Ladies — puntas rosas</li><li>Hedgehogs (niños) — zapatillas marrones pintadas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Setos en posición de juego</li></ul></div>
@@ -1284,9 +1382,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">05</span></span>
     <span class="scene-titles"><span class="scene-title">Jack is Arrested</span><span class="scene-sub">El arresto de Jack</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 14′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 1 (cierre) / hacia el Court</p>
 
     <div class="block">
@@ -1306,6 +1406,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Knave — rojo</li><li>Executioner — casco negro</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Gauze frontal #1 (bar 27)</li></ul></div>
@@ -1320,9 +1422,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">06</span></span>
     <span class="scene-titles"><span class="scene-title">Cards</span><span class="scene-sub">Setting up the Courtroom · Marcas rojas</span></span>
+    <span class="scene-dur">~2 min</span><span class="scene-bar">c. 27</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 16′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> Line-up de las cartas ≈ compás 27 (Cues 30–34).</p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Cards)</p>
 
     <div class="block">
@@ -1352,6 +1456,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Card Women/Men — corps de cartas (puntas rosas / zapatillas blancas)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>USC truck (podio) con tronos y gavel en posición</li><li>Colchones preseteados para la persecución/caídas</li></ul></div>
@@ -1366,9 +1472,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">07</span></span>
     <span class="scene-titles"><span class="scene-title">White Rabbit Solo</span><span class="scene-sub">Solo del Conejo Blanco</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 18′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
 
     <div class="block">
@@ -1388,6 +1496,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>White Rabbit — frac rojo (cambio desde Carroll)</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
@@ -1402,9 +1512,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">08</span></span>
     <span class="scene-titles"><span class="scene-title">Entrance of the Court</span><span class="scene-sub">Entrada de la Corte</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 20′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Court enters)</p>
 
     <div class="block">
@@ -1424,6 +1536,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Court Women — zapatos Rokko</li><li>Court Men — zapatillas rojas/negras pintadas</li><li>El King/Mad Hatter/March Hare/Dormouse vuelven en sus roles de la Corte</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Entrada de la Corte sobre el truck USC</li></ul></div>
@@ -1438,9 +1552,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">09</span></span>
     <span class="scene-titles"><span class="scene-title">Queen&#x27;s Tango Solo</span><span class="scene-sub">Solo de tango de la Reina</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 23′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Queen&#x27;s Tango)</p>
 
     <div class="block">
@@ -1460,6 +1576,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Queen of Hearts — tutú rojo, puntas rojas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
@@ -1474,9 +1592,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">10</span></span>
     <span class="scene-titles"><span class="scene-title">Trial</span><span class="scene-sub">El juicio</span></span>
+    <span class="scene-dur">~5 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 26′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (The Trial)</p>
 
     <div class="block">
@@ -1506,6 +1626,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       <p class="bsas-note">Bloque del &#x27;Court&#x27; del running de Buenos Aires: cubre el Tango de la Reina, El Juicio y La Persecución (escenas 2-9 a 2-14).</p>
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><p class="bsas-note" style="border-left-color:#C99B7F">Micrófonos del Sombrerero (tap) en el Acto 2 (ref. Acto III NBC): MICS ON ~24:00 / OFF ~25:10, y ON ~26:30 / OFF ~29:00. Pies de tap adicionales en «The Chase» se llaman sin número de cue.</p></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Vuelven todos los personajes de la Corte en versión &#x27;juicio&#x27;</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Máquina de escribir en mesa rodante operada en escena</li><li>Gavels y soporte en posición</li></ul></div>
@@ -1520,9 +1642,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">11</span></span>
     <span class="scene-titles"><span class="scene-title">Jack Solo</span><span class="scene-sub">Solo de Jack</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 31′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
 
     <div class="block">
@@ -1542,6 +1666,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Knave — zapatillas rojas/marrones pintadas</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
@@ -1556,9 +1682,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">12</span></span>
     <span class="scene-titles"><span class="scene-title">Alice — It Was Me</span><span class="scene-sub">&#x27;Fui yo&#x27;</span></span>
+    <span class="scene-dur">~2 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~2 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 33′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
 
     <div class="block">
@@ -1578,6 +1706,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice — vestido de baile</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><p class="empty">— sin elementos registrados —</p></div>
@@ -1592,9 +1722,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">13</span></span>
     <span class="scene-titles"><span class="scene-title">Trial Pas de Deux</span><span class="scene-sub">Pas de deux del juicio</span></span>
+    <span class="scene-dur">~5 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~5 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 35′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2</p>
 
     <div class="block">
@@ -1614,6 +1746,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice y Knave — vestuario de Corte</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Colchones preseteados</li></ul></div>
@@ -1628,9 +1762,11 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">14</span></span>
     <span class="scene-titles"><span class="scene-title">Chase</span><span class="scene-sub">La persecución</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 40′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 2 (Chase) + Front gauze #2 (Vortex)</p>
 
     <div class="block">
@@ -1650,6 +1786,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 
     
 
+    
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Cambios rápidos hacia el Epílogo: Alice, Rabbit y Jack pasan a ropa moderna</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Gauze frontal #2 (Vortex)</li><li>Negro total</li><li>Cambios rápidos hacia ropa moderna</li></ul></div>
@@ -1663,10 +1801,12 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
 <section class="scene" id="scene-2-15" data-search="epilogue the deanery (en el presente) · marcas blancas alice (modern) carroll (modern) jack (modern) photographer">
   <button class="scene-head" aria-expanded="false">
     <span class="scene-spine"><span class="scene-act">A2</span><span class="scene-no">15</span></span>
-    <span class="scene-titles"><span class="scene-title">Epilogue</span><span class="scene-sub">The Deanery (en el presente) · Marcas blancas</span></span>
+    <span class="scene-titles"><span class="scene-title">Epilogue <span class="audio-dot" title="Esta escena tiene audio"></span></span><span class="scene-sub">The Deanery (en el presente) · Marcas blancas</span></span>
+    <span class="scene-dur">~3 min</span>
     <span class="scene-toggle">+</span>
   </button>
   <div class="scene-body">
+    <p class="meta-time"><strong>Duración aprox.</strong> ~3 min &nbsp;·&nbsp; <strong>Inicio aprox.</strong> 43′ (acumulado en el acto) &nbsp;·&nbsp; <strong>Partitura:</strong> <a href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener" style="color:var(--brass)">completar desde la Cue Caller Score</a></p>
     <p class="corr"><strong>Correspondencia:</strong> Royal Ballet Acto 2, Esc. 3 (Epílogo)</p>
 
     <div class="block">
@@ -1696,6 +1836,8 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
       
     </div>
 
+    <div class="block audio-block"><h4>Audio — Sonido <span class="hint">(archivos QLab · abren en Drive)</span></h4><p class="audio-caption">Tiempos aproximados relativos al inicio del acto (referencia NBC/Toronto); nº de cue y QLab según la planilla de sonido de la producción — confirmar con Sonido del Colón.</p><div class="audiogrid"><a class="audiocard" href="https://drive.google.com/file/d/1ZHnra1H2-LZM6MbWCpgxfX63IbO7KMvu/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Birds 1.wav</span><span class="audio-cue">Cue «Epilogue – Birds and Plane» (aves 1)</span><span class="audio-trigger"><strong>Pie:</strong> Q14 · QLab 50 — Play a ~39:20 del acto (cambio de la Corte al Epílogo); fade out Q16 (QLab 57) a ~40:35.</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1AHm-mSvMXG_KttVtjtzS8P0rjqGjResn/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Birds 3.wav</span><span class="audio-cue">Cue «Epilogue – Birds and Plane» (aves 3)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Epilogue – Birds and Plane» (Q14 · QLab 50).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1V6afw4p9B9KgppYfOL11VUnRLbrt9Twl/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Plane.wav</span><span class="audio-cue">Cue «Epilogue – Birds and Plane» (avión)</span><span class="audio-trigger"><strong>Pie:</strong> Parte del cue «Epilogue – Birds and Plane» (Q14 · QLab 50).</span></span></a><a class="audiocard" href="https://drive.google.com/file/d/1jzsEx91eEJ5H6yoVeHx1COWDXZwD4W6p/view" target="_blank" rel="noopener"><span class="audio-ico">♪</span><span class="audio-txt"><span class="audio-name">Alice Boombox.wav</span><span class="audio-cue">Cue «Boombox» — suena por el boombox en escena</span><span class="audio-trigger"><strong>Pie:</strong> Q15 · QLab 51 — Play «Boombox»: sube en los primeros 8 tiempos; fade out MANUAL en 2 tiempos cuando entra la orquesta. Preset: a ~39:00 el deck coloca el boombox junto al banco (parlantes hacia el público). Un bailarín lo retira por Viamonte 1.</span></span></a></div></div>
+
     <div class="grid2">
       <div class="block"><h4>Vestuario</h4><ul><li>Alice / Carroll / Jack — ropa moderna (cambio rápido ~1 min en Viamonte)</li><li>Photographer — cámara al cuello</li></ul></div>
       <div class="block"><h4>Maquinaria</h4><ul><li>Set del banco del Deanery</li><li>Cartel &#x27;Teas&#x27; a Tucumán de la puerta del flat del Deanery</li></ul></div>
@@ -1715,7 +1857,7 @@ footer{padding:30px 20px 50px;color:var(--faint);font-size:.78rem;text-align:cen
   <div class="wrap">
     <h3>Documentos fuente (Google Drive)</h3>
     <p>Toda la información de esta guía proviene de estos archivos de la carpeta de producción. Los enlaces abren el archivo original en Drive — son solo de consulta; no se modifica nada en la carpeta compartida.</p>
-    <div class="srcgrid"><a class="src" href="https://drive.google.com/file/d/1YNSQxJKQ45Ia4pyu8FZnfhV4zAii0PpG/view" target="_blank" rel="noopener">Props plot (utilería por escena)</a><a class="src" href="https://drive.google.com/file/d/1oMGog7YYzOVdZCD4tOl3zLUDG3HhobkO/view" target="_blank" rel="noopener">Props inventory (inventario completo)</a><a class="src" href="https://drive.google.com/file/d/1YSWBBPSWqYtUu1TkyOjxa2qEIMKf5qd1/view" target="_blank" rel="noopener">OP Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1Ptvh4VZ2yGmWhfOSNxzlrBmoA2qilcvB/view" target="_blank" rel="noopener">PS Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1iX2jb2AGOpybMbPc0BYC0Gk5iI0w1X_N/view" target="_blank" rel="noopener">Running list &amp; armoury numbers</a><a class="src" href="https://drive.google.com/file/d/1-35PUW23rCT8Os_YiRrpSpcVNZEcyejx/view" target="_blank" rel="noopener">Stage Manager doc (running notes)</a><a class="src" href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener">Cue Caller Score (partitura de cues)</a><a class="src" href="https://drive.google.com/file/d/1UODXkqALjzWLrv1NwD1dgFnOucDLXtcm/view" target="_blank" rel="noopener">Costume Cardex (vestuario detallado)</a><a class="src" href="https://drive.google.com/file/d/1DZidW17gbp1p_OlDNyDzk1IZOqmnteBw/view" target="_blank" rel="noopener">Scene Character Breakdown</a><a class="src" href="https://drive.google.com/file/d/1sCs9QUmJBursxbbI3CaP2OlpaCU6STu9/view" target="_blank" rel="noopener">Sceneskema (grilla personajes/escena)</a><a class="src" href="https://drive.google.com/file/d/1gM74w5EwBD416L8dGF8Uq7RbVWIkgZty/view" target="_blank" rel="noopener">Cast list</a><a class="src" href="https://drive.google.com/file/d/1ZbbL-oKA_77u8X-6RLu2N2DdnTXKRkSM/view" target="_blank" rel="noopener">Reference list — zapatos</a><a class="src" href="https://drive.google.com/file/d/1QnOvO1sg6czMoAxT3A1wgkb3t15NfWVU/view" target="_blank" rel="noopener">Dressers lists (vestuaristas)</a><a class="src" href="https://drive.google.com/file/d/1Epo2jkXZXgb8AWFvpCgrJsFxzApIzKLX/view" target="_blank" rel="noopener">Consummables (consumibles por función)</a><a class="src" href="https://drive.google.com/file/d/1buQOvr4EFQz9Ba_avxVO5VD91pj6vORs/view" target="_blank" rel="noopener">Props photos (PDF)</a><a class="src" href="https://drive.google.com/drive/folders/1FN0bu9Ui4iGGhtYJrtejZX4Z1ZywMogl" target="_blank" rel="noopener">📁 Carpeta — Props Photographs</a><a class="src" href="https://drive.google.com/drive/folders/1KkDmRgdx8zhdzf8U8K8Wi9pyjmt-nesD" target="_blank" rel="noopener">📁 Carpeta — Alice costume photos</a><a class="src" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener">📁 Carpeta — Planos PDF (Buenos Aires)</a><a class="src" href="https://drive.google.com/drive/folders/1bDh1X51MLbxGGcD2j3EUeocG8I2Tijmw" target="_blank" rel="noopener">📁 Carpeta raíz de la producción</a></div>
+    <div class="srcgrid"><a class="src" href="https://drive.google.com/file/d/1YNSQxJKQ45Ia4pyu8FZnfhV4zAii0PpG/view" target="_blank" rel="noopener">Props plot (utilería por escena)</a><a class="src" href="https://drive.google.com/file/d/1oMGog7YYzOVdZCD4tOl3zLUDG3HhobkO/view" target="_blank" rel="noopener">Props inventory (inventario completo)</a><a class="src" href="https://drive.google.com/file/d/1YSWBBPSWqYtUu1TkyOjxa2qEIMKf5qd1/view" target="_blank" rel="noopener">OP Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1Ptvh4VZ2yGmWhfOSNxzlrBmoA2qilcvB/view" target="_blank" rel="noopener">PS Props Standbys</a><a class="src" href="https://drive.google.com/file/d/1iX2jb2AGOpybMbPc0BYC0Gk5iI0w1X_N/view" target="_blank" rel="noopener">Running list &amp; armoury numbers</a><a class="src" href="https://drive.google.com/file/d/1-35PUW23rCT8Os_YiRrpSpcVNZEcyejx/view" target="_blank" rel="noopener">Stage Manager doc (running notes)</a><a class="src" href="https://drive.google.com/file/d/1jeloNGfnx5Hsqr15r20_Uy2IoBYDHHUB/view" target="_blank" rel="noopener">Cue Caller Score (partitura de cues)</a><a class="src" href="https://drive.google.com/file/d/1UODXkqALjzWLrv1NwD1dgFnOucDLXtcm/view" target="_blank" rel="noopener">Costume Cardex (vestuario detallado)</a><a class="src" href="https://drive.google.com/file/d/1DZidW17gbp1p_OlDNyDzk1IZOqmnteBw/view" target="_blank" rel="noopener">Scene Character Breakdown</a><a class="src" href="https://drive.google.com/file/d/1sCs9QUmJBursxbbI3CaP2OlpaCU6STu9/view" target="_blank" rel="noopener">Sceneskema (grilla personajes/escena)</a><a class="src" href="https://drive.google.com/file/d/1gM74w5EwBD416L8dGF8Uq7RbVWIkgZty/view" target="_blank" rel="noopener">Cast list</a><a class="src" href="https://drive.google.com/file/d/1ZbbL-oKA_77u8X-6RLu2N2DdnTXKRkSM/view" target="_blank" rel="noopener">Reference list — zapatos</a><a class="src" href="https://drive.google.com/file/d/1QnOvO1sg6czMoAxT3A1wgkb3t15NfWVU/view" target="_blank" rel="noopener">Dressers lists (vestuaristas)</a><a class="src" href="https://drive.google.com/file/d/1Epo2jkXZXgb8AWFvpCgrJsFxzApIzKLX/view" target="_blank" rel="noopener">Consummables (consumibles por función)</a><a class="src" href="https://drive.google.com/file/d/1buQOvr4EFQz9Ba_avxVO5VD91pj6vORs/view" target="_blank" rel="noopener">Props photos (PDF)</a><a class="src" href="https://drive.google.com/drive/folders/1FN0bu9Ui4iGGhtYJrtejZX4Z1ZywMogl" target="_blank" rel="noopener">📁 Carpeta — Props Photographs</a><a class="src" href="https://drive.google.com/drive/folders/1KkDmRgdx8zhdzf8U8K8Wi9pyjmt-nesD" target="_blank" rel="noopener">📁 Carpeta — Alice costume photos</a><a class="src" href="https://drive.google.com/file/d/1YEcV09fTxECP4UMTTTCiCerd_Ofy8OOD/view" target="_blank" rel="noopener">Video Line-up (compases de referencia)</a><a class="src" href="https://drive.google.com/file/d/18JLfCtOVS4VHLrhF2-Pg60JEq_PwISWY/view" target="_blank" rel="noopener">Soft Goods (telones/gasas por compás)</a><a class="src" href="https://drive.google.com/file/d/1MZ06nc2P4tGAlVvU4kWmxMhUIUCWJZGG/view" target="_blank" rel="noopener">Planilla de cues de sonido (NBC/Toronto)</a><a class="src" href="https://drive.google.com/drive/folders/1xAuOg437ZJj84KtEIqy3OsiEIy-zDUi0" target="_blank" rel="noopener">📁 Carpeta — Audios de Sonido (QLab)</a><a class="src" href="https://drive.google.com/drive/folders/12XrufRjbR8gv7EHcaoc_v870vV4lSMu4" target="_blank" rel="noopener">📁 Carpeta — Planos PDF (Buenos Aires)</a><a class="src" href="https://drive.google.com/drive/folders/1bDh1X51MLbxGGcD2j3EUeocG8I2Tijmw" target="_blank" rel="noopener">📁 Carpeta raíz de la producción</a></div>
   </div>
 </section>
 
